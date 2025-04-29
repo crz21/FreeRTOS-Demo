@@ -148,6 +148,8 @@ int main(void)
     led_init();
     app_init();
 
+    
+
     vTaskStartScheduler();
 
     for (;;) {
