@@ -143,11 +143,10 @@ int main(void)
     HAL_Init();
     SystemClock_Config();
     MX_GPIO_Init();
-//    MX_LPUART1_UART_Init();
-//    HAL_UART_Receive_IT(&hlpuart1, (uint8_t *)Buffer, 10);
+    MX_LPUART1_UART_Init();
+    HAL_UART_Receive_IT(&hlpuart1, (uint8_t *)Buffer, 10);
     led_init();
     app_init();
-
 
     vTaskStartScheduler();
 
