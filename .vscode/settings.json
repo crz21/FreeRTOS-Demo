@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "shell.h": "c",
+        "usart.h": "c",
+        "freertos.h": "c",
+        "shell_port.h": "c"
+    }
+}
