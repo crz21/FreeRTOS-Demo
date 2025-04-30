@@ -30,6 +30,7 @@
 
 #include "led.h"
 #include "semphr.h"
+#include "shell_port.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -144,11 +145,10 @@ int main(void)
     SystemClock_Config();
     MX_GPIO_Init();
     MX_LPUART1_UART_Init();
-    HAL_UART_Receive_IT(&hlpuart1, (uint8_t *)Buffer, 10);
-    led_init();
-    app_init();
 
-    
+    led_init();
+    userShellInit();
+    app_init();
 
     vTaskStartScheduler();
 

@@ -41,6 +41,6 @@ void led2_thread(void *arg)
 void led_init(void)
 {
     g_test_mutex = xSemaphoreCreateMutex();
-    xTaskCreate(led1_thread, "led1_task", 128, NULL, 5, &m_led1_thread);
-    xTaskCreate(led2_thread, "led2_task", 128, NULL, 5, &m_led2_thread);
+    xTaskCreate(led1_thread, "led1_task", 128, NULL, 8, &m_led1_thread);
+    xTaskCreate(led2_thread, "led2_task", 128, NULL, 8, &m_led2_thread);
 }

@@ -9,13 +9,21 @@
  * 
  */
 
-#include "shell.h"
-#include "SEGGER_RTT.h"
+ #include "FreeRTOS.h"
+ #include "task.h"
+ #include "shell.h"
+ #include "serial.h"
+ #include "stm32f4xx_hal.h"
+ #include "usart.h"
+ #include "cevent.h"
+ #include "log.h"
 
 #define SHELL_BUFFER_SIZE 512
 
-Shell rttShell;
-char rttShellBuffer[SHELL_BUFFER_SIZE];
+Shell shell;
+char shellBuffer[SHELL_BUFFER_SIZE];
+
+static SemaphoreHandle_t shellMutex;
 
 /**
  * @brief rtt shell写
@@ -27,29 +35,9 @@ char rttShellBuffer[SHELL_BUFFER_SIZE];
  */
 short rttShellWrite(char *data, unsigned short len)
 {
-    static int blocked = 0;
-    unsigned int time = getTick();
-    short avail = 0;
-    short write = 0;
-    short wrote = 0;
-    do {
-        avail = SEGGER_RTT_GetAvailWriteSpace(0);
-        if (avail <= 0) {
-            if (blocked > 10) {
-                return 0;
-            }
-            delay(1);
-            blocked ++;
-        } else {
-            blocked = 0;
-            write = avail >= len ? len : avail;
-            SEGGER_RTT_Write(0, data, write);
-            data += write;
-            len -= write;
-            wrote += write;
-        }
-    } while (len > 0 && getTick() - time < 10);
-    return wrote;
+    // serialTransmit(&debugSerial, (uint8_t *)data, len, 0x1FF);
+    HAL_USART_Transmit(&hlpuart1, (uint8_t *)data, len, 0x1FF);
+    return len;
 }
 
 
@@ -63,16 +51,51 @@ short rttShellWrite(char *data, unsigned short len)
  */
 short rttShellRead(char *data, unsigned short len)
 {
-    return SEGGER_RTT_Read(0, data, len);
+    // return serialReceive(&debugSerial, (uint8_t *)data, len, 0);
+    return HAL_USART_Receive(&hlpuart1, (uint8_t *)data, len, 0);
+}
+
+/**
+ * @brief 用户shell上锁
+ * 
+ * @param shell shell
+ * 
+ * @return int 0
+ */
+int userShellLock(Shell *shell)
+{
+    xSemaphoreTakeRecursive(shellMutex, portMAX_DELAY);
+    return 0;
+}
+
+/**
+ * @brief 用户shell解锁
+ * 
+ * @param shell shell
+ * 
+ * @return int 0
+ */
+int userShellUnlock(Shell *shell)
+{
+    xSemaphoreGiveRecursive(shellMutex);
+    return 0;
 }
 
 /**
  * @brief 用户shell初始化
  * 
  */
-void rttShellInit(void)
+void userShellInit(void)
 {
-    rttShell.write = rttShellWrite;
-    rttShell.read = rttShellRead;
-    shellInit(&rttShell, rttShellBuffer, SHELL_BUFFER_SIZE);
+    shellMutex = xSemaphoreCreateMutex();
+
+    shell.write = userShellWrite;
+    shell.read = userShellRead;
+    shell.lock = userShellLock;
+    shell.unlock = userShellUnlock;
+    shellInit(&shell, shellBuffer, 512);
+    if (xTaskCreate(shellTask, "shell", 256, &shell, 5, NULL) != pdPASS)
+    {
+        logError("shell task creat failed");
+    }
 }
