@@ -1,9 +1,9 @@
 lpuart\queue.o: ..\middlewares\freertos\src\queue.c
-lpuart\queue.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
-lpuart\queue.o: F:\app\keil\ARM\ARMCC\Bin\..\include\string.h
+lpuart\queue.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+lpuart\queue.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 lpuart\queue.o: ..\middlewares\freertos\include\FreeRTOS.h
-lpuart\queue.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stddef.h
-lpuart\queue.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
+lpuart\queue.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lpuart\queue.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 lpuart\queue.o: ..\Core\FreeRTOSConfig.h
 lpuart\queue.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u0xx.h
 lpuart\queue.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u083xx.h

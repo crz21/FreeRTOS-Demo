@@ -1,8 +1,8 @@
 lpuart\stream_buffer.o: ..\middlewares\freertos\src\stream_buffer.c
-lpuart\stream_buffer.o: F:\app\keil\ARM\ARMCC\Bin\..\include\string.h
+lpuart\stream_buffer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 lpuart\stream_buffer.o: ..\middlewares\freertos\include\FreeRTOS.h
-lpuart\stream_buffer.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stddef.h
-lpuart\stream_buffer.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
+lpuart\stream_buffer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lpuart\stream_buffer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 lpuart\stream_buffer.o: ..\Core\FreeRTOSConfig.h
 lpuart\stream_buffer.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u0xx.h
 lpuart\stream_buffer.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u083xx.h

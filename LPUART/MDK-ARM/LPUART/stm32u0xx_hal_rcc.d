@@ -6,7 +6,7 @@ lpuart\stm32u0xx_hal_rcc.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_de
 lpuart\stm32u0xx_hal_rcc.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u0xx.h
 lpuart\stm32u0xx_hal_rcc.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u083xx.h
 lpuart\stm32u0xx_hal_rcc.o: ../Drivers/CMSIS/Include/core_cm0plus.h
-lpuart\stm32u0xx_hal_rcc.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
+lpuart\stm32u0xx_hal_rcc.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 lpuart\stm32u0xx_hal_rcc.o: ../Drivers/CMSIS/Include/cmsis_version.h
 lpuart\stm32u0xx_hal_rcc.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 lpuart\stm32u0xx_hal_rcc.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -14,7 +14,7 @@ lpuart\stm32u0xx_hal_rcc.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 lpuart\stm32u0xx_hal_rcc.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/system_stm32u0xx.h
 lpuart\stm32u0xx_hal_rcc.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal.h
 lpuart\stm32u0xx_hal_rcc.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-lpuart\stm32u0xx_hal_rcc.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stddef.h
+lpuart\stm32u0xx_hal_rcc.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 lpuart\stm32u0xx_hal_rcc.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_rcc_ex.h
 lpuart\stm32u0xx_hal_rcc.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_gpio.h
 lpuart\stm32u0xx_hal_rcc.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_gpio_ex.h

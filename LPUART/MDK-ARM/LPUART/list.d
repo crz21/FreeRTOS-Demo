@@ -1,8 +1,8 @@
 lpuart\list.o: ..\middlewares\freertos\src\list.c
-lpuart\list.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+lpuart\list.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 lpuart\list.o: ..\middlewares\freertos\include\FreeRTOS.h
-lpuart\list.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stddef.h
-lpuart\list.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
+lpuart\list.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lpuart\list.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 lpuart\list.o: ..\Core\FreeRTOSConfig.h
 lpuart\list.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u0xx.h
 lpuart\list.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u083xx.h

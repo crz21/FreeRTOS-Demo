@@ -1,8 +1,8 @@
 lpuart\event_groups.o: ..\middlewares\freertos\src\event_groups.c
-lpuart\event_groups.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+lpuart\event_groups.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 lpuart\event_groups.o: ..\middlewares\freertos\include\FreeRTOS.h
-lpuart\event_groups.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stddef.h
-lpuart\event_groups.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
+lpuart\event_groups.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lpuart\event_groups.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 lpuart\event_groups.o: ..\Core\FreeRTOSConfig.h
 lpuart\event_groups.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u0xx.h
 lpuart\event_groups.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u083xx.h

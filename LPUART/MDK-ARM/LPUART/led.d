@@ -1,8 +1,8 @@
 lpuart\led.o: ..\app\led.c
 lpuart\led.o: ..\app\led.h
 lpuart\led.o: ..\middlewares\freertos\include\FreeRTOS.h
-lpuart\led.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stddef.h
-lpuart\led.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
+lpuart\led.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lpuart\led.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 lpuart\led.o: ..\Core\FreeRTOSConfig.h
 lpuart\led.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u0xx.h
 lpuart\led.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u083xx.h
@@ -39,7 +39,7 @@ lpuart\led.o: ..\middlewares\freertos\include\portable.h
 lpuart\led.o: ..\middlewares\freertos\include\deprecated_definitions.h
 lpuart\led.o: ..\middlewares\freertos\port\RVDS\ARM_CM0\portmacro.h
 lpuart\led.o: ..\middlewares\freertos\include\mpu_wrappers.h
-lpuart\led.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdio.h
+lpuart\led.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 lpuart\led.o: ..\middlewares\freertos\include\task.h
 lpuart\led.o: ..\middlewares\freertos\include\list.h
 lpuart\led.o: ../Core/Inc/gpio.h
