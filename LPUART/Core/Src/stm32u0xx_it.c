@@ -149,18 +149,3 @@ void USART1_IRQHandler(void)
   /* USER CODE END USART3_LPUART1_IRQn 1 */
 }
 
-/* USER CODE BEGIN 1 */
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-{
-  /* Prevent unused argument(s) compilation warning */
-  UNUSED(huart);
-
-  if (huart->Instance == USART1)
-  {
-    HAL_UART_Transmit(&usart1, (uint8_t *)Buffer, 10, 0xFFFF);
-  }
-
-  HAL_UART_Receive_IT(&usart1, (uint8_t *)Buffer, 10);
-}
-
-/* USER CODE END 1 */
