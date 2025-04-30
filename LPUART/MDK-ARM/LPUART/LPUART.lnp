@@ -32,6 +32,11 @@
 "lpuart\heap_4.o"
 "lpuart\port.o"
 "lpuart\led.o"
+"lpuart\shell.o"
+"lpuart\shell_cmd_list.o"
+"lpuart\shell_companion.o"
+"lpuart\shell_ext.o"
+"lpuart\shell_port.o"
 --library_type=microlib --strict --scatter "LPUART\LPUART.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
