@@ -115,7 +115,8 @@ void HardFault_Handler(void)
 void SysTick_Handler(void)
 {
 
-  HAL_IncTick();
+  // HAL_IncTick();
+
 // delay_decrement();
     #if (INCLUDE_xTaskGetSchedulerState == 1)
         if (xTaskgetSchedulerState() != taskSCHEDULER_NOT_STARTED)
