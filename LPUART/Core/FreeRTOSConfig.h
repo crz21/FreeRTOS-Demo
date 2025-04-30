@@ -54,11 +54,10 @@
  #define configUSE_16_BIT_TICKS		0
  #define configIDLE_SHOULD_YIELD		1
  #define configUSE_MUTEXES         1
-////#define configUSE_TRACE_FACILITY		1
 ////#define configQUEUE_REGISTRY_SIZE		8
-////#define configCHECK_FOR_STACK_OVERFLOW	0     //原先设置为2
+////#define configCHECK_FOR_STACK_OVERFLOW	0     
 ////#define configUSE_RECURSIVE_MUTEXES		1
-////#define configUSE_MALLOC_FAILED_HOOK	0       //原先设置为1
+////#define configUSE_MALLOC_FAILED_HOOK	0     
 ////#define configUSE_APPLICATION_TASK_TAG	0
 ////#define configUSE_COUNTING_SEMAPHORES	1
 ////#define configGENERATE_RUN_TIME_STATS	0
