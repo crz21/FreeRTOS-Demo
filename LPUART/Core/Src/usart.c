@@ -95,7 +95,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     /* LPUART1 clock enable */
     __HAL_RCC_USART1_CLK_ENABLE();
 
-    __HAL_RCC_GPIOC_CLK_ENABLE();
+    __HAL_RCC_GPIOA_CLK_ENABLE();
     /**LPUART1 GPIO Configuration
     PA9     ------> UART1_TX
     PA10     ------> UART1_RX
@@ -128,8 +128,8 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
     __HAL_RCC_USART1_CLK_DISABLE();
 
     /**LPUART1 GPIO Configuration
-    PC0     ------> LPUART1_RX
-    PC1     ------> LPUART1_TX
+    PA9     ------> UART1_TX
+    PA10     ------> UART1_RX
     */
     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_10|GPIO_PIN_9);
 
