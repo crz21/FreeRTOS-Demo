@@ -47,3 +47,6 @@ lpuart\main.o: ..\middlewares\freertos\include\list.h
 lpuart\main.o: ..\app\led.h
 lpuart\main.o: ..\middlewares\freertos\include\semphr.h
 lpuart\main.o: ..\middlewares\freertos\include\queue.h
+lpuart\main.o: ..\middlewares\letter_shell\shell_port.h
+lpuart\main.o: ..\middlewares\letter_shell\shell.h
+lpuart\main.o: ..\middlewares\letter_shell\shell_cfg.h

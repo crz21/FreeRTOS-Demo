@@ -27,7 +27,14 @@ Project File Date:  04/30/2025
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'E:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'LPUART'
-"LPUART\LPUART.axf" - 0 Error(s), 0 Warning(s).
+compiling stm32u0xx_it.c...
+../Core/Src/stm32u0xx_it.c(125): warning:  #223-D: function "xPortSysTickHandler" declared implicitly
+              xPortSysTickHandler();
+../Core/Src/stm32u0xx_it.c: 1 warning, 0 errors
+linking...
+Program Size: Code=24668 RO-data=1552 RW-data=220 ZI-data=12372  
+FromELF: creating hex file...
+"LPUART\LPUART.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -50,7 +57,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.5.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

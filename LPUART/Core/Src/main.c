@@ -104,7 +104,7 @@ void delay_ms(uint16_t ms)  // 1ms延时
 
 int fputc(int ch, FILE *f)
 {
-    HAL_UART_Transmit(&hlpuart1, (uint8_t *)&ch, 1, 0xffff);
+    HAL_UART_Transmit(&usart1, (uint8_t *)&ch, 1, 0xffff);
     return ch;
 }
 
@@ -115,7 +115,7 @@ int fputc(int ch, FILE *f)
 int fgetc(FILE *f)
 {
     uint8_t ch = 0;
-    HAL_UART_Receive(&hlpuart1, &ch, 1, 0xffff);
+    HAL_UART_Receive(&usart1, &ch, 1, 0xffff);
     return ch;
 }
 

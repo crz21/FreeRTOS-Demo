@@ -12,11 +12,13 @@
  #include "FreeRTOS.h"
  #include "task.h"
  #include "shell.h"
- #include "serial.h"
- #include "stm32f4xx_hal.h"
+// #include "serial.h"
+#include "stm32u0xx.h"
  #include "usart.h"
- #include "cevent.h"
- #include "log.h"
+// #include "cevent.h"
+// #include "log.h"
+#include "semphr.h"
+#include "stm32u0xx_hal_usart.h"
 
 #define SHELL_BUFFER_SIZE 512
 
@@ -33,10 +35,10 @@ static SemaphoreHandle_t shellMutex;
  * 
  * @return short 实际写入的数据长度
  */
-short rttShellWrite(char *data, unsigned short len)
+short userShellWrite(char *data, unsigned short len)
 {
     // serialTransmit(&debugSerial, (uint8_t *)data, len, 0x1FF);
-    HAL_USART_Transmit(&hlpuart1, (uint8_t *)data, len, 0x1FF);
+    HAL_UART_Transmit(&usart1, (uint8_t *)data, len, 0x1FF);
     return len;
 }
 
@@ -49,10 +51,10 @@ short rttShellWrite(char *data, unsigned short len)
  * 
  * @return short 实际读取的数据长度
  */
-short rttShellRead(char *data, unsigned short len)
+short userShellRead(char *data, unsigned short len)
 {
     // return serialReceive(&debugSerial, (uint8_t *)data, len, 0);
-    return HAL_USART_Receive(&hlpuart1, (uint8_t *)data, len, 0);
+    return HAL_UART_Receive(&usart1, (uint8_t *)data, len, 0);
 }
 
 /**
@@ -64,7 +66,7 @@ short rttShellRead(char *data, unsigned short len)
  */
 int userShellLock(Shell *shell)
 {
-    xSemaphoreTakeRecursive(shellMutex, portMAX_DELAY);
+    xSemaphoreTake(shellMutex, portMAX_DELAY);
     return 0;
 }
 
@@ -77,7 +79,7 @@ int userShellLock(Shell *shell)
  */
 int userShellUnlock(Shell *shell)
 {
-    xSemaphoreGiveRecursive(shellMutex);
+    xSemaphoreGive(shellMutex);
     return 0;
 }
 
@@ -96,6 +98,6 @@ void userShellInit(void)
     shellInit(&shell, shellBuffer, 512);
     if (xTaskCreate(shellTask, "shell", 256, &shell, 5, NULL) != pdPASS)
     {
-        logError("shell task creat failed");
+        // logError("shell task creat failed");
     }
 }
