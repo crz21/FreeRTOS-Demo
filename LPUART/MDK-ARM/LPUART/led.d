@@ -46,3 +46,5 @@ lpuart\led.o: ../Core/Inc/gpio.h
 lpuart\led.o: ../Core/Inc/main.h
 lpuart\led.o: ..\middlewares\freertos\include\semphr.h
 lpuart\led.o: ..\middlewares\freertos\include\queue.h
+lpuart\led.o: ..\middlewares\letter_shell\shell.h
+lpuart\led.o: ..\middlewares\letter_shell\shell_cfg.h

@@ -102,17 +102,17 @@ void delay_ms(uint16_t ms)  // 1ms延时
     }
 }
 
-//int fputc(int ch, FILE *f)
+// int fputc(int ch, FILE *f)
 //{
-//    HAL_UART_Transmit(&hlpuart1, (uint8_t *)&ch, 1, 0xffff);
-//    return ch;
-//}
+//     HAL_UART_Transmit(&hlpuart1, (uint8_t *)&ch, 1, 0xffff);
+//     return ch;
+// }
 
 ///**
 //* @brief 重定向c库函数getchar,scanf到USARTx
 //* @retval None
 //*/
-//int fgetc(FILE *f)
+// int fgetc(FILE *f)
 //{
 //   uint8_t ch = 0;
 //   HAL_UART_Receive(&hlpuart1, &ch, 1, 0xffff);
@@ -167,7 +167,7 @@ int main(void)
     MX_GPIO_Init();
     MX_LPUART1_UART_Init();
     HAL_UART_Receive_IT(&hlpuart1, (uint8_t *)Buffer, 10);
-    led_init();
+    // led_init();
     userShellInit();
     barco_shell_init();
     app_init();
