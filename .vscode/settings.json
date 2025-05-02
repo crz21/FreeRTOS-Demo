@@ -3,6 +3,7 @@
         "shell.h": "c",
         "usart.h": "c",
         "freertos.h": "c",
-        "shell_port.h": "c"
+        "shell_port.h": "c",
+        "stm32u0xx_hal_usart.h": "c"
     }
 }

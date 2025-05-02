@@ -1,9 +1,9 @@
 lpuart\heap_4.o: ..\middlewares\freertos\port\MemMang\heap_4.c
-lpuart\heap_4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-lpuart\heap_4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+lpuart\heap_4.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+lpuart\heap_4.o: F:\app\keil\ARM\ARMCC\Bin\..\include\string.h
 lpuart\heap_4.o: ..\middlewares\freertos\include\FreeRTOS.h
-lpuart\heap_4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-lpuart\heap_4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lpuart\heap_4.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stddef.h
+lpuart\heap_4.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
 lpuart\heap_4.o: ..\Core\FreeRTOSConfig.h
 lpuart\heap_4.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u0xx.h
 lpuart\heap_4.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u083xx.h
