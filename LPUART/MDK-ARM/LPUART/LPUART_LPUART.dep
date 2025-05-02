@@ -1097,7 +1097,7 @@ I (..\middlewares\freertos\port\RVDS\ARM_CM0\portmacro.h)(0x673E67AC)
 I (..\middlewares\freertos\include\mpu_wrappers.h)(0x673E67AC)
 I (..\middlewares\freertos\include\task.h)(0x673E67AC)
 I (..\middlewares\freertos\include\list.h)(0x673E67AC)
-F (..\app\led.c)(0x68124832)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32U0xx_HAL_Driver/Inc -I ../Drivers/STM32U0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32U0xx/Include -I ../Drivers/CMSIS/Include -I ..\middlewares\freertos\include -I ..\Core -I ..\middlewares\freertos\port\RVDS\ARM_CM0 -I ..\app -I ..\middlewares\freertos\include -I ..\middlewares\letter_shell-I.\RTE\_LPUART-IF:\app\keil\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32U083xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32U083xx-o lpuart\led.o --omf_browse lpuart\led.crf --depend lpuart\led.d)
+F (..\app\led.c)(0x6814C3BB)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32U0xx_HAL_Driver/Inc -I ../Drivers/STM32U0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32U0xx/Include -I ../Drivers/CMSIS/Include -I ..\middlewares\freertos\include -I ..\Core -I ..\middlewares\freertos\port\RVDS\ARM_CM0 -I ..\app -I ..\middlewares\freertos\include -I ..\middlewares\letter_shell-I.\RTE\_LPUART-IF:\app\keil\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32U083xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32U083xx-o lpuart\led.o --omf_browse lpuart\led.crf --depend lpuart\led.d)
 I (..\app\led.h)(0x680FAA52)
 I (..\middlewares\freertos\include\FreeRTOS.h)(0x680E37C3)
 I (F:\app\keil\ARM\ARMCC\include\stddef.h)(0x6025237E)
@@ -1144,13 +1144,47 @@ I (../Core/Inc/gpio.h)(0x6634AA1E)
 I (../Core/Inc/main.h)(0x66362B24)
 I (..\middlewares\freertos\include\semphr.h)(0x673E67AC)
 I (..\middlewares\freertos\include\queue.h)(0x673E67AC)
-F (..\middlewares\letter_shell\shell.c)(0x68124832)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32U0xx_HAL_Driver/Inc -I ../Drivers/STM32U0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32U0xx/Include -I ../Drivers/CMSIS/Include -I ..\middlewares\freertos\include -I ..\Core -I ..\middlewares\freertos\port\RVDS\ARM_CM0 -I ..\app -I ..\middlewares\freertos\include -I ..\middlewares\letter_shell-I.\RTE\_LPUART-IF:\app\keil\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32U083xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32U083xx-o lpuart\shell.o --omf_browse lpuart\shell.crf --depend lpuart\shell.d)
+I (..\middlewares\letter_shell\shell.h)(0x68124832)
+I (..\middlewares\letter_shell\shell_cfg.h)(0x6812E631)
+F (..\middlewares\letter_shell\shell.c)(0x6814C38D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32U0xx_HAL_Driver/Inc -I ../Drivers/STM32U0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32U0xx/Include -I ../Drivers/CMSIS/Include -I ..\middlewares\freertos\include -I ..\Core -I ..\middlewares\freertos\port\RVDS\ARM_CM0 -I ..\app -I ..\middlewares\freertos\include -I ..\middlewares\letter_shell-I.\RTE\_LPUART-IF:\app\keil\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32U083xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32U083xx-o lpuart\shell.o --omf_browse lpuart\shell.crf --depend lpuart\shell.d)
 I (..\middlewares\letter_shell\shell.h)(0x68124832)
 I (..\middlewares\letter_shell\shell_cfg.h)(0x6812E631)
 I (F:\app\keil\ARM\ARMCC\include\string.h)(0x6025237E)
 I (F:\app\keil\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (F:\app\keil\ARM\ARMCC\include\stdarg.h)(0x60252376)
 I (..\middlewares\letter_shell\shell_ext.h)(0x68124832)
+I (../Core/Inc/gpio.h)(0x6634AA1E)
+I (../Core/Inc/main.h)(0x66362B24)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal.h)(0x662378D9)
+I (../Core/Inc/stm32u0xx_hal_conf.h)(0x663A476E)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_rcc.h)(0x662378D9)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_def.h)(0x662378D9)
+I (../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u0xx.h)(0x662378D7)
+I (../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u083xx.h)(0x662378D7)
+I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x662378D9)
+I (F:\app\keil\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x662378D9)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x662378D9)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x662378D9)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x662378D9)
+I (../Drivers/CMSIS/Device/ST/STM32U0xx/Include/system_stm32u0xx.h)(0x662378D7)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x662378D9)
+I (F:\app\keil\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_rcc_ex.h)(0x662378D9)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_gpio.h)(0x662378D9)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_gpio_ex.h)(0x662378D9)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_dma.h)(0x662378D9)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_ll_dma.h)(0x662378D9)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_ll_dmamux.h)(0x662378D9)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_dma_ex.h)(0x662378D9)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_cortex.h)(0x662378D9)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_exti.h)(0x662378D9)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_flash.h)(0x662378D9)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_flash_ex.h)(0x662378D9)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_pwr.h)(0x662378D9)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_pwr_ex.h)(0x662378D9)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_uart.h)(0x662378D9)
+I (../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_uart_ex.h)(0x662378D9)
 F (..\middlewares\letter_shell\shell_cmd_list.c)(0x68124832)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32U0xx_HAL_Driver/Inc -I ../Drivers/STM32U0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32U0xx/Include -I ../Drivers/CMSIS/Include -I ..\middlewares\freertos\include -I ..\Core -I ..\middlewares\freertos\port\RVDS\ARM_CM0 -I ..\app -I ..\middlewares\freertos\include -I ..\middlewares\letter_shell-I.\RTE\_LPUART-IF:\app\keil\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32U083xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32U083xx-o lpuart\shell_cmd_list.o --omf_browse lpuart\shell_cmd_list.crf --depend lpuart\shell_cmd_list.d)
 I (..\middlewares\letter_shell\shell.h)(0x68124832)
 I (..\middlewares\letter_shell\shell_cfg.h)(0x6812E631)
@@ -1162,7 +1196,7 @@ I (..\middlewares\letter_shell\shell_cfg.h)(0x6812E631)
 I (..\middlewares\letter_shell\shell.h)(0x68124832)
 I (..\middlewares\letter_shell\shell_ext.h)(0x68124832)
 I (F:\app\keil\ARM\ARMCC\include\string.h)(0x6025237E)
-F (..\middlewares\letter_shell\shell_port.c)(0x68144D45)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32U0xx_HAL_Driver/Inc -I ../Drivers/STM32U0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32U0xx/Include -I ../Drivers/CMSIS/Include -I ..\middlewares\freertos\include -I ..\Core -I ..\middlewares\freertos\port\RVDS\ARM_CM0 -I ..\app -I ..\middlewares\freertos\include -I ..\middlewares\letter_shell-I.\RTE\_LPUART-IF:\app\keil\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32U083xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32U083xx-o lpuart\shell_port.o --omf_browse lpuart\shell_port.crf --depend lpuart\shell_port.d)
+F (..\middlewares\letter_shell\shell_port.c)(0x6814C1F4)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32U0xx_HAL_Driver/Inc -I ../Drivers/STM32U0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32U0xx/Include -I ../Drivers/CMSIS/Include -I ..\middlewares\freertos\include -I ..\Core -I ..\middlewares\freertos\port\RVDS\ARM_CM0 -I ..\app -I ..\middlewares\freertos\include -I ..\middlewares\letter_shell-I.\RTE\_LPUART-IF:\app\keil\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include-D__UVISION_VERSION="536" -D_RTE_ -DSTM32U083xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32U083xx-o lpuart\shell_port.o --omf_browse lpuart\shell_port.crf --depend lpuart\shell_port.d)
 I (..\middlewares\freertos\include\FreeRTOS.h)(0x680E37C3)
 I (F:\app\keil\ARM\ARMCC\include\stddef.h)(0x6025237E)
 I (F:\app\keil\ARM\ARMCC\include\stdint.h)(0x6025237E)

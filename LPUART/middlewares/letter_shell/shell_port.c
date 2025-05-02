@@ -12,11 +12,8 @@
 #include "FreeRTOS.h"
 #include "shell.h"
 #include "task.h"
-// #include "serial.h"
 #include "stm32u0xx.h"
 #include "usart.h"
-// #include "cevent.h"
-// #include "log.h"
 #include "semphr.h"
 
 #define SHELL_BUFFER_SIZE 512

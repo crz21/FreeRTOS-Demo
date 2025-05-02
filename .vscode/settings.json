@@ -4,6 +4,10 @@
         "usart.h": "c",
         "freertos.h": "c",
         "shell_port.h": "c",
-        "stm32u0xx_hal_usart.h": "c"
+        "stm32u0xx_hal_usart.h": "c",
+        "stdio.h": "c",
+        "task.h": "c",
+        "led.h": "c",
+        "gpio.h": "c"
     }
 }

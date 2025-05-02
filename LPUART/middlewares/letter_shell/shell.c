@@ -14,6 +14,7 @@
 #include "stdio.h"
 #include "stdarg.h"
 #include "shell_ext.h"
+#include "gpio.h"
 
 
 #if SHELL_USING_CMD_EXPORT == 1
@@ -1973,7 +1974,6 @@ void shellClear(void)
 SHELL_EXPORT_CMD(
 SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC)|SHELL_CMD_DISABLE_RETURN,
 clear, shellClear, clear console);
-
 
 /**
  * @brief shell执行命令
