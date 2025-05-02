@@ -28,7 +28,6 @@
 #include <stdio.h>
 #include <task.h>
 
-#include "led.h"
 #include "semphr.h"
 #include "shell_port.h"
 /* USER CODE END Includes */
@@ -166,7 +165,6 @@ int main(void)
     SystemClock_Config();
     MX_GPIO_Init();
     MX_LPUART1_UART_Init();
-    HAL_UART_Receive_IT(&hlpuart1, (uint8_t *)Buffer, 10);
     // led_init();
     userShellInit();
     barco_shell_init();
