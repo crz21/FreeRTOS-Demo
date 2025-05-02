@@ -14,7 +14,6 @@
 #include "stdio.h"
 #include "stdarg.h"
 #include "shell_ext.h"
-#include "gpio.h"
 
 
 #if SHELL_USING_CMD_EXPORT == 1
