@@ -44,7 +44,6 @@ lpuart\main.o: ..\middlewares\freertos\include\mpu_wrappers.h
 lpuart\main.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdio.h
 lpuart\main.o: ..\middlewares\freertos\include\task.h
 lpuart\main.o: ..\middlewares\freertos\include\list.h
-lpuart\main.o: ..\app\led.h
 lpuart\main.o: ..\middlewares\freertos\include\semphr.h
 lpuart\main.o: ..\middlewares\freertos\include\queue.h
 lpuart\main.o: ..\middlewares\letter_shell\shell_port.h

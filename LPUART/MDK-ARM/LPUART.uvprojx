@@ -574,9 +574,9 @@
           <GroupName>app</GroupName>
           <Files>
             <File>
-              <FileName>led.c</FileName>
+              <FileName>shell_extend.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\app\led.c</FilePath>
+              <FilePath>..\app\shell_extend.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -10,11 +10,11 @@
  */
 
 #include "FreeRTOS.h"
-#include "shell.h"
-#include "task.h"
-#include "stm32u0xx.h"
-#include "usart.h"
 #include "semphr.h"
+#include "shell.h"
+#include "stm32u0xx.h"
+#include "task.h"
+#include "usart.h"
 
 #define SHELL_BUFFER_SIZE 512
 
@@ -22,14 +22,26 @@ Shell shell;
 char shellBuffer[SHELL_BUFFER_SIZE];
 
 static SemaphoreHandle_t shellMutex;
-
+static TaskHandle_t lettershellTaskHandle;
+/******************************************************************************************************
+** @brief
+*
+*
+* @note
+*******************************************************************************************************/
+__weak void shellTask(void *argument)
+{
+    for (;;) {
+        vTaskDelay(pdMS_TO_TICKS(1));
+    }
+}
 /**
- * @brief rtt shell写
+ * @brief rtt shell�?
  *
  * @param data 数据
  * @param len 数据长度
  *
- * @return short 实际写入的数据长度
+ * @return short 实际写入的数�?长度
  */
 short userShellWrite(char *data, unsigned short len)
 {
@@ -39,12 +51,12 @@ short userShellWrite(char *data, unsigned short len)
 
 uint8_t test_buf[512];
 /**
- * @brief rtt shell读
+ * @brief rtt shell�?
  *
  * @param data 数据
  * @param len 数据长度
  *
- * @return short 实际读取的数据长度
+ * @return short 实际读取的数�?长度
  */
 short userShellRead(char *data, unsigned short len)
 {
@@ -85,7 +97,7 @@ int userShellUnlock(Shell *shell)
 }
 
 /**
- * @brief 用户shell初始化
+ * @brief 用户shell初�?�化
  *
  */
 void userShellInit(void)
@@ -97,8 +109,10 @@ void userShellInit(void)
     shell.lock = userShellLock;
     shell.unlock = userShellUnlock;
     shellInit(&shell, shellBuffer, 512);
-//    if (xTaskCreate(shellTask, "shell", 256, &shell, 5, NULL) != pdPASS)
-//    {
-//        // logError("shell task creat failed");
-//    } xTaskCreate(shellTask, "lettershellTask", 2048, &shell, 5, &lettershellTaskHandle);
+    //    if (xTaskCreate(shellTask, "shell", 256, &shell, 5, NULL) != pdPASS)
+    //    {
+    //        // logError("shell task creat failed");
+    //    } xTaskCreate(shellTask, "lettershellTask", 2048, &shell, 5, &lettershellTaskHandle);
+
+    xTaskCreate(shellTask, "lettershellTask", 2048, &shell, 5, &lettershellTaskHandle);
 }
