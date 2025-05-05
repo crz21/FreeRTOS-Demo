@@ -3,7 +3,7 @@
 <title>Static Call Graph - [LPUART\LPUART.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image LPUART\LPUART.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon May 05 11:44:46 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon May 05 12:05:20 2025
 <BR><P>
 <H3>Maximum Stack Usage =        260 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -115,15 +115,15 @@ Global Symbols
 
 <P><STRONG><a name="[fe]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
 
-<P><STRONG><a name="[ee]"></a>__asm___6_port_c_39a90d8d__prvPortStartFirstTask</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, port.o(.emb_text))
-<BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
+<P><STRONG><a name="[ef]"></a>__asm___6_port_c_39a90d8d__prvPortStartFirstTask</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, port.o(.emb_text))
+<BR><BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
 </UL>
 
-<P><STRONG><a name="[ef]"></a>ulSetInterruptMaskFromISR</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, port.o(.emb_text))
+<P><STRONG><a name="[f0]"></a>ulSetInterruptMaskFromISR</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, port.o(.emb_text))
 <BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortSysTickHandler
 </UL>
 
-<P><STRONG><a name="[f1]"></a>vClearInterruptMaskFromISR</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, port.o(.emb_text))
+<P><STRONG><a name="[f2]"></a>vClearInterruptMaskFromISR</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, port.o(.emb_text))
 <BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortSysTickHandler
 </UL>
 
@@ -240,12 +240,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_GetPLLClockFreq
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWREx_ControlVoltageScaling
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortSetupTimerInterrupt
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortSetupTimerInterrupt
 </UL>
 
 <P><STRONG><a name="[100]"></a>__aeabi_idiv</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, idiv.o(.text), UNUSED)
@@ -256,9 +256,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTEx_SetNbDataToProcess
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToDec
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToDec
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
 </UL>
 
 <P><STRONG><a name="[49]"></a>__aeabi_uldivmod</STRONG> (Thumb, 96 bytes, Stack size 48 bytes, uldiv.o(.text))
@@ -280,8 +280,8 @@ Global Symbols
 
 <P><STRONG><a name="[101]"></a>_ll_mul</STRONG> (Thumb, 0 bytes, Stack size 64 bytes, llmul.o(.text), UNUSED)
 
-<P><STRONG><a name="[9b]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
+<P><STRONG><a name="[9c]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
 </UL>
 
 <P><STRONG><a name="[102]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
@@ -305,8 +305,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCreateTask
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtRun
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCreateTask
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtRun
 </UL>
 
 <P><STRONG><a name="[106]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
@@ -315,30 +315,30 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[df]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRemoveParamQuotes
+<P><STRONG><a name="[e0]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRemoveParamQuotes
 </UL>
 
-<P><STRONG><a name="[b2]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
+<P><STRONG><a name="[b3]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistoryAdd
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPassword
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistoryAdd
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPassword
 </UL>
 
-<P><STRONG><a name="[e2]"></a>strncmp</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, strncmp.o(.text))
+<P><STRONG><a name="[e3]"></a>strncmp</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, strncmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = strncmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
 </UL>
 
-<P><STRONG><a name="[c3]"></a>__aeabi_fmul</STRONG> (Thumb, 122 bytes, Stack size 16 bytes, fmul.o(.text))
+<P><STRONG><a name="[c4]"></a>__aeabi_fmul</STRONG> (Thumb, 122 bytes, Stack size 16 bytes, fmul.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_fmul
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
 </UL>
 
 <P><STRONG><a name="[50]"></a>__aeabi_fdiv</STRONG> (Thumb, 124 bytes, Stack size 16 bytes, fdiv.o(.text))
@@ -346,7 +346,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
 </UL>
 
 <P><STRONG><a name="[52]"></a>__aeabi_i2f</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, fflti.o(.text))
@@ -354,7 +354,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
 </UL>
 
 <P><STRONG><a name="[54]"></a>__aeabi_ui2f</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, ffltui.o(.text))
@@ -362,7 +362,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
 </UL>
 
 <P><STRONG><a name="[4b]"></a>__aeabi_llsl</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, llshl.o(.text))
@@ -426,7 +426,7 @@ Global Symbols
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[e6]"></a>HAL_GPIO_TogglePin</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32u0xx_hal_gpio.o(i.HAL_GPIO_TogglePin))
+<P><STRONG><a name="[e7]"></a>HAL_GPIO_TogglePin</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32u0xx_hal_gpio.o(i.HAL_GPIO_TogglePin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_GPIO_TogglePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shell_contrel_led
@@ -777,12 +777,12 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32u083xx.o(RESET)
 </UL>
-<P><STRONG><a name="[ca]"></a>__ARM_common_switch8</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32u0xx_hal_dma.o(i.__ARM_common_switch8))
+<P><STRONG><a name="[cb]"></a>__ARM_common_switch8</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32u0xx_hal_dma.o(i.__ARM_common_switch8))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __ARM_common_switch8
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtRun
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetVarValue
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtRun
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetVarValue
 </UL>
 
 <P><STRONG><a name="[10b]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
@@ -791,11 +791,12 @@ Global Symbols
 
 <P><STRONG><a name="[10d]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[26]"></a>main</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[26]"></a>main</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = main &rArr; vTaskStartScheduler &rArr; prvCreateIdleTasks &rArr; xTaskCreate &rArr; prvCreateTask &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
+<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LPUART1_UART_Init
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
@@ -804,144 +805,144 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[9e]"></a>pvPortMalloc</STRONG> (Thumb, 250 bytes, Stack size 32 bytes, heap_4.o(i.pvPortMalloc))
+<P><STRONG><a name="[9f]"></a>pvPortMalloc</STRONG> (Thumb, 250 bytes, Stack size 32 bytes, heap_4.o(i.pvPortMalloc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvHeapInit
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvHeapInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCreateTask
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCreateTask
 </UL>
 
 <P><STRONG><a name="[f5]"></a>pvTaskIncrementMutexHeldCount</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, tasks.o(i.pvTaskIncrementMutexHeldCount))
-<BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<BR><BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
 
-<P><STRONG><a name="[a6]"></a>pxPortInitialiseStack</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, port.o(i.pxPortInitialiseStack))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
+<P><STRONG><a name="[a7]"></a>pxPortInitialiseStack</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, port.o(i.pxPortInitialiseStack))
+<BR><BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
 </UL>
 
 <P><STRONG><a name="[39]"></a>shellBackspace</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, shell.o(i.shellBackspace))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = shellBackspace &rArr; shellDeleteByte &rArr; shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteByte
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteByte
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[ce]"></a>shellCheckPermission</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, shell.o(i.shellCheckPermission))
+<P><STRONG><a name="[cf]"></a>shellCheckPermission</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, shell.o(i.shellCheckPermission))
 <BR><BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHandler
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHandler
 </UL>
 
 <P><STRONG><a name="[41]"></a>shellClear</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, shell.o(i.shellClear))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = shellClear &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[b5]"></a>shellClearCommandLine</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, shell.o(i.shellClearCommandLine))
+<P><STRONG><a name="[b6]"></a>shellClearCommandLine</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, shell.o(i.shellClearCommandLine))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = shellClearCommandLine &rArr; shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteCommandLine
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteByte
+<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteCommandLine
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteByte
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
 </UL>
 
 <P><STRONG><a name="[3e]"></a>shellCmds</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, shell.o(i.shellCmds))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = shellCmds &rArr; shellListCommand &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
+<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
 <P><STRONG><a name="[3a]"></a>shellDelete</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, shell.o(i.shellDelete))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = shellDelete &rArr; shellDeleteByte &rArr; shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteByte
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteByte
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[b0]"></a>shellDeleteByte</STRONG> (Thumb, 222 bytes, Stack size 24 bytes, shell.o(i.shellDeleteByte))
+<P><STRONG><a name="[b1]"></a>shellDeleteByte</STRONG> (Thumb, 222 bytes, Stack size 24 bytes, shell.o(i.shellDeleteByte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = shellDeleteByte &rArr; shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteCommandLine
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteByte
+<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteCommandLine
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteByte
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDelete
 <LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellBackspace
 </UL>
 
-<P><STRONG><a name="[b7]"></a>shellDeleteCommandLine</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, shell.o(i.shellDeleteCommandLine))
+<P><STRONG><a name="[b8]"></a>shellDeleteCommandLine</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, shell.o(i.shellDeleteCommandLine))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteByte
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
+<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteByte
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
 </UL>
 
 <P><STRONG><a name="[35]"></a>shellDown</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, shell.o(i.shellDown))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = shellDown &rArr; shellHistory &rArr; shellClearCommandLine &rArr; shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
 <P><STRONG><a name="[3b]"></a>shellEnter</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, shell.o(i.shellEnter))
 <BR><BR>[Stack]<UL><LI>Max Depth = 260<LI>Call Chain = shellEnter &rArr; shellExec &rArr; shellRunCommand &rArr; shellExtRun &rArr; shellExtParsePara &rArr; shellExtParseVar &rArr; shellSeekCommand &rArr; shellGetCommandName &rArr; shellToHex
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
+<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[ba]"></a>shellExec</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, shell.o(i.shellExec))
+<P><STRONG><a name="[bb]"></a>shellExec</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, shell.o(i.shellExec))
 <BR><BR>[Stack]<UL><LI>Max Depth = 252<LI>Call Chain = shellExec &rArr; shellRunCommand &rArr; shellExtRun &rArr; shellExtParsePara &rArr; shellExtParseVar &rArr; shellSeekCommand &rArr; shellGetCommandName &rArr; shellToHex
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellParserParam
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistoryAdd
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPassword
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellParserParam
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistoryAdd
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPassword
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellEnter
 </UL>
 
-<P><STRONG><a name="[c4]"></a>shellExtParsePara</STRONG> (Thumb, 128 bytes, Stack size 24 bytes, shell_ext.o(i.shellExtParsePara))
+<P><STRONG><a name="[c5]"></a>shellExtParsePara</STRONG> (Thumb, 128 bytes, Stack size 24 bytes, shell_ext.o(i.shellExtParsePara))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = shellExtParsePara &rArr; shellExtParseVar &rArr; shellSeekCommand &rArr; shellGetCommandName &rArr; shellToHex
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseVar
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseString
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseChar
+<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseVar
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseString
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseChar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtRun
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtRun
 </UL>
 
-<P><STRONG><a name="[c9]"></a>shellExtRun</STRONG> (Thumb, 256 bytes, Stack size 96 bytes, shell_ext.o(i.shellExtRun))
+<P><STRONG><a name="[ca]"></a>shellExtRun</STRONG> (Thumb, 256 bytes, Stack size 96 bytes, shell_ext.o(i.shellExtRun))
 <BR><BR>[Stack]<UL><LI>Max Depth = 212<LI>Call Chain = shellExtRun &rArr; shellExtParsePara &rArr; shellExtParseVar &rArr; shellSeekCommand &rArr; shellGetCommandName &rArr; shellToHex
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
+<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
 </UL>
 
-<P><STRONG><a name="[b4]"></a>shellGetCurrent</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, shell.o(i.shellGetCurrent))
+<P><STRONG><a name="[b5]"></a>shellGetCurrent</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, shell.o(i.shellGetCurrent))
 <BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellVars
 <LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellUsers
 <LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVar
@@ -952,20 +953,20 @@ Global Symbols
 <LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shell_contrel_led
 </UL>
 
-<P><STRONG><a name="[c8]"></a>shellGetVarValue</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, shell.o(i.shellGetVarValue))
+<P><STRONG><a name="[c9]"></a>shellGetVarValue</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, shell.o(i.shellGetVarValue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = shellGetVarValue &rArr; __ARM_common_switch8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseVar
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
+<BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseVar
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
 </UL>
 
-<P><STRONG><a name="[cd]"></a>shellHandler</STRONG> (Thumb, 262 bytes, Stack size 32 bytes, shell.o(i.shellHandler))
+<P><STRONG><a name="[ce]"></a>shellHandler</STRONG> (Thumb, 262 bytes, Stack size 32 bytes, shell.o(i.shellHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = shellHandler &rArr; shellNormalInput &rArr; shellInsertByte &rArr; shellWritePrompt &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellNormalInput
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
+<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellNormalInput
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
 </UL>
 <BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTask
 </UL>
@@ -973,295 +974,295 @@ Global Symbols
 <P><STRONG><a name="[3c]"></a>shellHelp</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, shell.o(i.shellHelp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = shellHelp &rArr; shellWriteCommandHelp &rArr; shellSeekCommand &rArr; shellGetCommandName &rArr; shellToHex
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListAll
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
+<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListAll
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[d3]"></a>shellInit</STRONG> (Thumb, 142 bytes, Stack size 24 bytes, shell.o(i.shellInit))
+<P><STRONG><a name="[d4]"></a>shellInit</STRONG> (Thumb, 142 bytes, Stack size 24 bytes, shell.o(i.shellInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = shellInit &rArr; shellSeekCommand &rArr; shellGetCommandName &rArr; shellToHex
 </UL>
 <BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellAdd
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellAdd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
+<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
 </UL>
 
-<P><STRONG><a name="[d6]"></a>shellInsertByte</STRONG> (Thumb, 248 bytes, Stack size 16 bytes, shell.o(i.shellInsertByte))
+<P><STRONG><a name="[d7]"></a>shellInsertByte</STRONG> (Thumb, 248 bytes, Stack size 16 bytes, shell.o(i.shellInsertByte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = shellInsertByte &rArr; shellWritePrompt &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteByte
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellNormalInput
+<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellNormalInput
 </UL>
 
 <P><STRONG><a name="[40]"></a>shellKeys</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, shell.o(i.shellKeys))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = shellKeys &rArr; shellListKey &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
+<BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
 <P><STRONG><a name="[37]"></a>shellLeft</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, shell.o(i.shellLeft))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = shellLeft &rArr; shellWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteByte
+<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteByte
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[d0]"></a>shellListAll</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, shell.o(i.shellListAll))
+<P><STRONG><a name="[d1]"></a>shellListAll</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, shell.o(i.shellListAll))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = shellListAll &rArr; shellListCommand &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
+<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHelp
 </UL>
 
-<P><STRONG><a name="[b8]"></a>shellListCommand</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, shell.o(i.shellListCommand))
+<P><STRONG><a name="[b9]"></a>shellListCommand</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, shell.o(i.shellListCommand))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = shellListCommand &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListAll
+<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListAll
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCmds
 </UL>
 
-<P><STRONG><a name="[d8]"></a>shellListItem</STRONG> (Thumb, 236 bytes, Stack size 24 bytes, shell.o(i.shellListItem))
+<P><STRONG><a name="[d9]"></a>shellListItem</STRONG> (Thumb, 236 bytes, Stack size 24 bytes, shell.o(i.shellListItem))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandDesc
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteByte
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandDesc
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandDesc
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteByte
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandDesc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
 </UL>
 
-<P><STRONG><a name="[d7]"></a>shellListKey</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, shell.o(i.shellListKey))
+<P><STRONG><a name="[d8]"></a>shellListKey</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, shell.o(i.shellListKey))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = shellListKey &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
 </UL>
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellKeys
 </UL>
 
-<P><STRONG><a name="[db]"></a>shellListUser</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, shell.o(i.shellListUser))
+<P><STRONG><a name="[dc]"></a>shellListUser</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, shell.o(i.shellListUser))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = shellListUser &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellUsers
 </UL>
 
-<P><STRONG><a name="[dc]"></a>shellListVar</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, shell.o(i.shellListVar))
+<P><STRONG><a name="[dd]"></a>shellListVar</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, shell.o(i.shellListVar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = shellListVar &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellVars
 </UL>
 
-<P><STRONG><a name="[cf]"></a>shellNormalInput</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, shell.o(i.shellNormalInput))
+<P><STRONG><a name="[d0]"></a>shellNormalInput</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, shell.o(i.shellNormalInput))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = shellNormalInput &rArr; shellInsertByte &rArr; shellWritePrompt &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInsertByte
+<BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInsertByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHandler
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHandler
 </UL>
 
 <P><STRONG><a name="[36]"></a>shellRight</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, shell.o(i.shellRight))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = shellRight &rArr; shellWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteByte
+<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteByte
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[bf]"></a>shellRunCommand</STRONG> (Thumb, 180 bytes, Stack size 24 bytes, shell.o(i.shellRunCommand))
+<P><STRONG><a name="[c0]"></a>shellRunCommand</STRONG> (Thumb, 180 bytes, Stack size 24 bytes, shell.o(i.shellRunCommand))
 <BR><BR>[Stack]<UL><LI>Max Depth = 236<LI>Call Chain = shellRunCommand &rArr; shellExtRun &rArr; shellExtParsePara &rArr; shellExtParseVar &rArr; shellSeekCommand &rArr; shellGetCommandName &rArr; shellToHex
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtRun
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRemoveParamQuotes
+<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtRun
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRemoveParamQuotes
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
 </UL>
 
-<P><STRONG><a name="[be]"></a>shellSeekCommand</STRONG> (Thumb, 130 bytes, Stack size 48 bytes, shell.o(i.shellSeekCommand))
+<P><STRONG><a name="[bf]"></a>shellSeekCommand</STRONG> (Thumb, 130 bytes, Stack size 48 bytes, shell.o(i.shellSeekCommand))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = shellSeekCommand &rArr; shellGetCommandName &rArr; shellToHex
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
+<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseVar
+<BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseVar
 <LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVar
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
 </UL>
 
-<P><STRONG><a name="[d5]"></a>shellSetUser</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, shell.o(i.shellSetUser))
+<P><STRONG><a name="[d6]"></a>shellSetUser</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, shell.o(i.shellSetUser))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = shellSetUser &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
+<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
 </UL>
 
 <P><STRONG><a name="[33]"></a>shellSetVar</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, shell.o(i.shellSetVar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = shellSetVar &rArr; shellSetVarValue &rArr; shellShowVar &rArr; shellToDec &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[e3]"></a>shellSetVarValue</STRONG> (Thumb, 150 bytes, Stack size 24 bytes, shell.o(i.shellSetVarValue))
+<P><STRONG><a name="[e4]"></a>shellSetVarValue</STRONG> (Thumb, 150 bytes, Stack size 24 bytes, shell.o(i.shellSetVarValue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = shellSetVarValue &rArr; shellShowVar &rArr; shellToDec &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
+<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
 </UL>
 <BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVar
 </UL>
 
-<P><STRONG><a name="[dd]"></a>shellSplit</STRONG> (Thumb, 250 bytes, Stack size 56 bytes, shell.o(i.shellSplit))
+<P><STRONG><a name="[de]"></a>shellSplit</STRONG> (Thumb, 250 bytes, Stack size 56 bytes, shell.o(i.shellSplit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = shellSplit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellParserParam
+<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellParserParam
 </UL>
 
 <P><STRONG><a name="[38]"></a>shellTab</STRONG> (Thumb, 288 bytes, Stack size 40 bytes, shell.o(i.shellTab))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = shellTab &rArr; shellListAll &rArr; shellListCommand &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListAll
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCompare
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListAll
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCompare
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
 <P><STRONG><a name="[31]"></a>shellTask</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, shell.o(i.shellTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = shellTask &rArr; shellHandler &rArr; shellNormalInput &rArr; shellInsertByte &rArr; shellWritePrompt &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHandler
+<BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell_port.o(i.userShellInit)
 </UL>
-<P><STRONG><a name="[e4]"></a>shellToDec</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, shell.o(i.shellToDec))
+<P><STRONG><a name="[e5]"></a>shellToDec</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, shell.o(i.shellToDec))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = shellToDec &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
 </UL>
 
-<P><STRONG><a name="[cc]"></a>shellToHex</STRONG> (Thumb, 56 bytes, Stack size 12 bytes, shell.o(i.shellToHex))
+<P><STRONG><a name="[cd]"></a>shellToHex</STRONG> (Thumb, 56 bytes, Stack size 12 bytes, shell.o(i.shellToHex))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = shellToHex
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
 </UL>
 
 <P><STRONG><a name="[34]"></a>shellUp</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, shell.o(i.shellUp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = shellUp &rArr; shellHistory &rArr; shellClearCommandLine &rArr; shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
 <P><STRONG><a name="[3d]"></a>shellUsers</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, shell.o(i.shellUsers))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = shellUsers &rArr; shellListUser &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
+<BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
 <P><STRONG><a name="[3f]"></a>shellVars</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, shell.o(i.shellVars))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = shellVars &rArr; shellListVar &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
+<BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
-<P><STRONG><a name="[b3]"></a>shellWriteString</STRONG> (Thumb, 44 bytes, Stack size 24 bytes, shell.o(i.shellWriteString))
+<P><STRONG><a name="[b4]"></a>shellWriteString</STRONG> (Thumb, 44 bytes, Stack size 24 bytes, shell.o(i.shellWriteString))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = shellWriteString
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
 <LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVar
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInsertByte
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteCommandLine
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetUser
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListVar
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListUser
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListKey
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInsertByte
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteCommandLine
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClear
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPassword
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteReturnValue
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPassword
 </UL>
 
 <P><STRONG><a name="[32]"></a>shell_contrel_led</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, shell_extend.o(i.shell_contrel_led))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = shell_contrel_led &rArr; HAL_GPIO_TogglePin
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
+<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCurrent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell_extend.o(shellCommand)
 </UL>
-<P><STRONG><a name="[8d]"></a>userShellInit</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, shell_port.o(i.userShellInit))
+<P><STRONG><a name="[8e]"></a>userShellInit</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, shell_port.o(i.userShellInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = userShellInit &rArr; xTaskCreate &rArr; prvCreateTask &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1269,7 +1270,7 @@ Global Symbols
 <P><STRONG><a name="[2f]"></a>userShellLock</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, shell_port.o(i.userShellLock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = userShellLock &rArr; xQueueSemaphoreTake &rArr; vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell_port.o(i.userShellInit)
 </UL>
@@ -1284,7 +1285,7 @@ Global Symbols
 <P><STRONG><a name="[30]"></a>userShellUnlock</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, shell_port.o(i.userShellUnlock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = userShellUnlock &rArr; xQueueGenericSend &rArr; vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell_port.o(i.userShellInit)
 </UL>
@@ -1295,92 +1296,92 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell_port.o(i.userShellInit)
 </UL>
-<P><STRONG><a name="[90]"></a>uxListRemove</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, list.o(i.uxListRemove))
-<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckTasksWaitingTermination
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<P><STRONG><a name="[91]"></a>uxListRemove</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, list.o(i.uxListRemove))
+<BR><BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckTasksWaitingTermination
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
 </UL>
 
-<P><STRONG><a name="[a7]"></a>vListInitialise</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, list.o(i.vListInitialise))
-<BR><BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseTaskLists
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<P><STRONG><a name="[a8]"></a>vListInitialise</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, list.o(i.vListInitialise))
+<BR><BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseTaskLists
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
 </UL>
 
-<P><STRONG><a name="[a5]"></a>vListInitialiseItem</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, list.o(i.vListInitialiseItem))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
+<P><STRONG><a name="[a6]"></a>vListInitialiseItem</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, list.o(i.vListInitialiseItem))
+<BR><BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
 </UL>
 
-<P><STRONG><a name="[91]"></a>vListInsert</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, list.o(i.vListInsert))
+<P><STRONG><a name="[92]"></a>vListInsert</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, list.o(i.vListInsert))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = vListInsert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
 </UL>
 
-<P><STRONG><a name="[93]"></a>vPortEnterCritical</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, port.o(i.vPortEnterCritical))
-<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckTasksWaitingTermination
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<P><STRONG><a name="[94]"></a>vPortEnterCritical</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, port.o(i.vPortEnterCritical))
+<BR><BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckTasksWaitingTermination
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueFull
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueFull
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 </UL>
 
-<P><STRONG><a name="[95]"></a>vPortExitCritical</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, port.o(i.vPortExitCritical))
-<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckTasksWaitingTermination
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<P><STRONG><a name="[96]"></a>vPortExitCritical</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, port.o(i.vPortExitCritical))
+<BR><BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckTasksWaitingTermination
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueFull
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueFull
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 </UL>
 
-<P><STRONG><a name="[9f]"></a>vPortFree</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, heap_4.o(i.vPortFree))
+<P><STRONG><a name="[a0]"></a>vPortFree</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, heap_4.o(i.vPortFree))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
 </UL>
-<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCreateTask
+<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCreateTask
 </UL>
 
-<P><STRONG><a name="[ea]"></a>vPortSetupTimerInterrupt</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, port.o(i.vPortSetupTimerInterrupt))
+<P><STRONG><a name="[eb]"></a>vPortSetupTimerInterrupt</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, port.o(i.vPortSetupTimerInterrupt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = vPortSetupTimerInterrupt &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
+<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
 </UL>
 
-<P><STRONG><a name="[96]"></a>vPortYield</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, port.o(i.vPortYield))
+<P><STRONG><a name="[97]"></a>vPortYield</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, port.o(i.vPortYield))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
 <LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIdleTask
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 </UL>
 
 <P><STRONG><a name="[8c]"></a>vTaskDelay</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, tasks.o(i.vTaskDelay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortYield
+<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortYield
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_thread
 <LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellRead
@@ -1388,142 +1389,143 @@ Global Symbols
 
 <P><STRONG><a name="[f3]"></a>vTaskInternalSetTimeOutState</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, tasks.o(i.vTaskInternalSetTimeOutState))
 <BR><BR>[Called By]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 
-<P><STRONG><a name="[ac]"></a>vTaskMissedYield</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, tasks.o(i.vTaskMissedYield))
-<BR><BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<P><STRONG><a name="[ad]"></a>vTaskMissedYield</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, tasks.o(i.vTaskMissedYield))
+<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
 </UL>
 
-<P><STRONG><a name="[eb]"></a>vTaskPlaceOnEventList</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, tasks.o(i.vTaskPlaceOnEventList))
+<P><STRONG><a name="[ec]"></a>vTaskPlaceOnEventList</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, tasks.o(i.vTaskPlaceOnEventList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
+<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 
-<P><STRONG><a name="[ec]"></a>vTaskPriorityDisinheritAfterTimeout</STRONG> (Thumb, 184 bytes, Stack size 32 bytes, tasks.o(i.vTaskPriorityDisinheritAfterTimeout))
+<P><STRONG><a name="[ed]"></a>vTaskPriorityDisinheritAfterTimeout</STRONG> (Thumb, 184 bytes, Stack size 32 bytes, tasks.o(i.vTaskPriorityDisinheritAfterTimeout))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = vTaskPriorityDisinheritAfterTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
 
-<P><STRONG><a name="[8e]"></a>vTaskStartScheduler</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, tasks.o(i.vTaskStartScheduler))
+<P><STRONG><a name="[8f]"></a>vTaskStartScheduler</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, tasks.o(i.vTaskStartScheduler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = vTaskStartScheduler &rArr; prvCreateIdleTasks &rArr; xTaskCreate &rArr; prvCreateTask &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCreateIdleTasks
-<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCreateIdleTasks
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ad]"></a>vTaskSuspendAll</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, tasks.o(i.vTaskSuspendAll))
+<P><STRONG><a name="[ae]"></a>vTaskSuspendAll</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, tasks.o(i.vTaskSuspendAll))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
 
 <P><STRONG><a name="[46]"></a>vTaskSwitchContext</STRONG> (Thumb, 106 bytes, Stack size 0 bytes, tasks.o(i.vTaskSwitchContext))
 <BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PendSV_Handler
 </UL>
 
-<P><STRONG><a name="[ed]"></a>xPortStartScheduler</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, port.o(i.xPortStartScheduler))
+<P><STRONG><a name="[ee]"></a>xPortStartScheduler</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, port.o(i.xPortStartScheduler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = xPortStartScheduler &rArr; vPortSetupTimerInterrupt &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortSetupTimerInterrupt
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__asm___6_port_c_39a90d8d__prvPortStartFirstTask
+<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortSetupTimerInterrupt
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__asm___6_port_c_39a90d8d__prvPortStartFirstTask
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
 </UL>
 
 <P><STRONG><a name="[87]"></a>xPortSysTickHandler</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, port.o(i.xPortSysTickHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = xPortSysTickHandler &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vClearInterruptMaskFromISR
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ulSetInterruptMaskFromISR
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
+<BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vClearInterruptMaskFromISR
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ulSetInterruptMaskFromISR
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[e7]"></a>xQueueCreateMutex</STRONG> (Thumb, 30 bytes, Stack size 24 bytes, queue.o(i.xQueueCreateMutex))
+<P><STRONG><a name="[e8]"></a>xQueueCreateMutex</STRONG> (Thumb, 30 bytes, Stack size 24 bytes, queue.o(i.xQueueCreateMutex))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = xQueueCreateMutex &rArr; xQueueGenericCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
+<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
+<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
 </UL>
 
-<P><STRONG><a name="[f2]"></a>xQueueGenericCreate</STRONG> (Thumb, 86 bytes, Stack size 40 bytes, queue.o(i.xQueueGenericCreate))
+<P><STRONG><a name="[8d]"></a>xQueueGenericCreate</STRONG> (Thumb, 86 bytes, Stack size 40 bytes, queue.o(i.xQueueGenericCreate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = xQueueGenericCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
+<BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
 </UL>
 
-<P><STRONG><a name="[a4]"></a>xQueueGenericReset</STRONG> (Thumb, 148 bytes, Stack size 24 bytes, queue.o(i.xQueueGenericReset))
+<P><STRONG><a name="[a5]"></a>xQueueGenericReset</STRONG> (Thumb, 148 bytes, Stack size 24 bytes, queue.o(i.xQueueGenericReset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = xQueueGenericReset &rArr; xTaskRemoveFromEventList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortYield
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialise
+<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortYield
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialise
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
+<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
 </UL>
 
-<P><STRONG><a name="[a2]"></a>xQueueGenericSend</STRONG> (Thumb, 252 bytes, Stack size 48 bytes, queue.o(i.xQueueGenericSend))
+<P><STRONG><a name="[a3]"></a>xQueueGenericSend</STRONG> (Thumb, 252 bytes, Stack size 48 bytes, queue.o(i.xQueueGenericSend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = xQueueGenericSend &rArr; vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueFull
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortYield
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueFull
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortYield
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
+<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
 <LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellUnlock
 </UL>
 
-<P><STRONG><a name="[e8]"></a>xQueueSemaphoreTake</STRONG> (Thumb, 298 bytes, Stack size 40 bytes, queue.o(i.xQueueSemaphoreTake))
+<P><STRONG><a name="[e9]"></a>xQueueSemaphoreTake</STRONG> (Thumb, 298 bytes, Stack size 40 bytes, queue.o(i.xQueueSemaphoreTake))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = xQueueSemaphoreTake &rArr; vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvTaskIncrementMutexHeldCount
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvGetDisinheritPriorityAfterTimeout
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortYield
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortYield
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellLock
 </UL>
@@ -1532,72 +1534,72 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = xTaskCheckForTimeOut
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 
 <P><STRONG><a name="[8b]"></a>xTaskCreate</STRONG> (Thumb, 50 bytes, Stack size 48 bytes, tasks.o(i.xTaskCreate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = xTaskCreate &rArr; prvCreateTask &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCreateTask
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCreateTask
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
+<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_init
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCreateIdleTasks
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCreateIdleTasks
 </UL>
 
-<P><STRONG><a name="[f0]"></a>xTaskIncrementTick</STRONG> (Thumb, 352 bytes, Stack size 24 bytes, tasks.o(i.xTaskIncrementTick))
+<P><STRONG><a name="[f1]"></a>xTaskIncrementTick</STRONG> (Thumb, 352 bytes, Stack size 24 bytes, tasks.o(i.xTaskIncrementTick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
 </UL>
 <BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortSysTickHandler
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 </UL>
 
-<P><STRONG><a name="[9a]"></a>xTaskPriorityDisinherit</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, tasks.o(i.xTaskPriorityDisinherit))
+<P><STRONG><a name="[9b]"></a>xTaskPriorityDisinherit</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, tasks.o(i.xTaskPriorityDisinherit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = xTaskPriorityDisinherit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
 </UL>
 
 <P><STRONG><a name="[f6]"></a>xTaskPriorityInherit</STRONG> (Thumb, 204 bytes, Stack size 16 bytes, tasks.o(i.xTaskPriorityInherit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = xTaskPriorityInherit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
 
-<P><STRONG><a name="[ab]"></a>xTaskRemoveFromEventList</STRONG> (Thumb, 250 bytes, Stack size 16 bytes, tasks.o(i.xTaskRemoveFromEventList))
+<P><STRONG><a name="[ac]"></a>xTaskRemoveFromEventList</STRONG> (Thumb, 250 bytes, Stack size 16 bytes, tasks.o(i.xTaskRemoveFromEventList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = xTaskRemoveFromEventList
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
 </UL>
 
-<P><STRONG><a name="[af]"></a>xTaskResumeAll</STRONG> (Thumb, 336 bytes, Stack size 24 bytes, tasks.o(i.xTaskResumeAll))
+<P><STRONG><a name="[b0]"></a>xTaskResumeAll</STRONG> (Thumb, 336 bytes, Stack size 24 bytes, tasks.o(i.xTaskResumeAll))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortYield
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortYield
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
 <P>
 <H3>
@@ -1683,352 +1685,352 @@ Local Symbols
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UARTEx_SetRxFifoThreshold
 </UL>
 
-<P><STRONG><a name="[99]"></a>prvCopyDataToQueue</STRONG> (Thumb, 128 bytes, Stack size 24 bytes, queue.o(i.prvCopyDataToQueue))
+<P><STRONG><a name="[9a]"></a>prvCopyDataToQueue</STRONG> (Thumb, 128 bytes, Stack size 24 bytes, queue.o(i.prvCopyDataToQueue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = prvCopyDataToQueue &rArr; xTaskPriorityDisinherit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 
 <P><STRONG><a name="[f7]"></a>prvGetDisinheritPriorityAfterTimeout</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, queue.o(i.prvGetDisinheritPriorityAfterTimeout))
-<BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<BR><BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
 
-<P><STRONG><a name="[a1]"></a>prvInitialiseMutex</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, queue.o(i.prvInitialiseMutex))
+<P><STRONG><a name="[a2]"></a>prvInitialiseMutex</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, queue.o(i.prvInitialiseMutex))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = prvInitialiseMutex &rArr; xQueueGenericSend &rArr; vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
+<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
 </UL>
 
-<P><STRONG><a name="[a3]"></a>prvInitialiseNewQueue</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, queue.o(i.prvInitialiseNewQueue))
+<P><STRONG><a name="[a4]"></a>prvInitialiseNewQueue</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, queue.o(i.prvInitialiseNewQueue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = prvInitialiseNewQueue &rArr; xQueueGenericReset &rArr; xTaskRemoveFromEventList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
 </UL>
 
-<P><STRONG><a name="[a8]"></a>prvIsQueueEmpty</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, queue.o(i.prvIsQueueEmpty))
+<P><STRONG><a name="[a9]"></a>prvIsQueueEmpty</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, queue.o(i.prvIsQueueEmpty))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = prvIsQueueEmpty
 </UL>
-<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
 
-<P><STRONG><a name="[a9]"></a>prvIsQueueFull</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, queue.o(i.prvIsQueueFull))
+<P><STRONG><a name="[aa]"></a>prvIsQueueFull</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, queue.o(i.prvIsQueueFull))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = prvIsQueueFull
 </UL>
-<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 
-<P><STRONG><a name="[aa]"></a>prvUnlockQueue</STRONG> (Thumb, 142 bytes, Stack size 16 bytes, queue.o(i.prvUnlockQueue))
+<P><STRONG><a name="[ab]"></a>prvUnlockQueue</STRONG> (Thumb, 142 bytes, Stack size 16 bytes, queue.o(i.prvUnlockQueue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = prvUnlockQueue &rArr; xTaskRemoveFromEventList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskMissedYield
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskMissedYield
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 
-<P><STRONG><a name="[8f]"></a>prvAddCurrentTaskToDelayedList</STRONG> (Thumb, 150 bytes, Stack size 32 bytes, tasks.o(i.prvAddCurrentTaskToDelayedList))
+<P><STRONG><a name="[90]"></a>prvAddCurrentTaskToDelayedList</STRONG> (Thumb, 150 bytes, Stack size 32 bytes, tasks.o(i.prvAddCurrentTaskToDelayedList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = prvAddCurrentTaskToDelayedList &rArr; vListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
 </UL>
 
-<P><STRONG><a name="[92]"></a>prvAddNewTaskToReadyList</STRONG> (Thumb, 200 bytes, Stack size 8 bytes, tasks.o(i.prvAddNewTaskToReadyList))
+<P><STRONG><a name="[93]"></a>prvAddNewTaskToReadyList</STRONG> (Thumb, 200 bytes, Stack size 8 bytes, tasks.o(i.prvAddNewTaskToReadyList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = prvAddNewTaskToReadyList &rArr; prvInitialiseTaskLists
 </UL>
-<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseTaskLists
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortYield
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseTaskLists
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortYield
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
 </UL>
 
-<P><STRONG><a name="[97]"></a>prvCheckTasksWaitingTermination</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, tasks.o(i.prvCheckTasksWaitingTermination))
+<P><STRONG><a name="[98]"></a>prvCheckTasksWaitingTermination</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, tasks.o(i.prvCheckTasksWaitingTermination))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = prvCheckTasksWaitingTermination &rArr; prvDeleteTCB &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIdleTask
 </UL>
 
-<P><STRONG><a name="[9c]"></a>prvCreateIdleTasks</STRONG> (Thumb, 90 bytes, Stack size 48 bytes, tasks.o(i.prvCreateIdleTasks))
+<P><STRONG><a name="[9d]"></a>prvCreateIdleTasks</STRONG> (Thumb, 90 bytes, Stack size 48 bytes, tasks.o(i.prvCreateIdleTasks))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = prvCreateIdleTasks &rArr; xTaskCreate &rArr; prvCreateTask &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
 </UL>
 
-<P><STRONG><a name="[9d]"></a>prvCreateTask</STRONG> (Thumb, 88 bytes, Stack size 56 bytes, tasks.o(i.prvCreateTask))
+<P><STRONG><a name="[9e]"></a>prvCreateTask</STRONG> (Thumb, 88 bytes, Stack size 56 bytes, tasks.o(i.prvCreateTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = prvCreateTask &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
 </UL>
 
-<P><STRONG><a name="[98]"></a>prvDeleteTCB</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, tasks.o(i.prvDeleteTCB))
+<P><STRONG><a name="[99]"></a>prvDeleteTCB</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, tasks.o(i.prvDeleteTCB))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = prvDeleteTCB &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 </UL>
-<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckTasksWaitingTermination
+<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckTasksWaitingTermination
 </UL>
 
 <P><STRONG><a name="[2b]"></a>prvIdleTask</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, tasks.o(i.prvIdleTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = prvIdleTask &rArr; prvCheckTasksWaitingTermination &rArr; prvDeleteTCB &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckTasksWaitingTermination
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortYield
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCheckTasksWaitingTermination
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortYield
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> tasks.o(i.prvCreateIdleTasks)
 </UL>
-<P><STRONG><a name="[a0]"></a>prvInitialiseNewTask</STRONG> (Thumb, 128 bytes, Stack size 40 bytes, tasks.o(i.prvInitialiseNewTask))
+<P><STRONG><a name="[a1]"></a>prvInitialiseNewTask</STRONG> (Thumb, 128 bytes, Stack size 40 bytes, tasks.o(i.prvInitialiseNewTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = prvInitialiseNewTask
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialiseItem
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pxPortInitialiseStack
+<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialiseItem
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pxPortInitialiseStack
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCreateTask
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCreateTask
 </UL>
 
-<P><STRONG><a name="[94]"></a>prvInitialiseTaskLists</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, tasks.o(i.prvInitialiseTaskLists))
+<P><STRONG><a name="[95]"></a>prvInitialiseTaskLists</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, tasks.o(i.prvInitialiseTaskLists))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = prvInitialiseTaskLists
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialise
+<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialise
 </UL>
-<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
+<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddNewTaskToReadyList
 </UL>
 
 <P><STRONG><a name="[f8]"></a>prvResetNextTaskUnblockTime</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, tasks.o(i.prvResetNextTaskUnblockTime))
-<BR><BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
+<BR><BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
 </UL>
 
-<P><STRONG><a name="[ae]"></a>prvHeapInit</STRONG> (Thumb, 90 bytes, Stack size 12 bytes, heap_4.o(i.prvHeapInit))
+<P><STRONG><a name="[af]"></a>prvHeapInit</STRONG> (Thumb, 90 bytes, Stack size 12 bytes, heap_4.o(i.prvHeapInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = prvHeapInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
 
-<P><STRONG><a name="[e9]"></a>prvInsertBlockIntoFreeList</STRONG> (Thumb, 96 bytes, Stack size 8 bytes, heap_4.o(i.prvInsertBlockIntoFreeList))
+<P><STRONG><a name="[ea]"></a>prvInsertBlockIntoFreeList</STRONG> (Thumb, 96 bytes, Stack size 8 bytes, heap_4.o(i.prvInsertBlockIntoFreeList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = prvInsertBlockIntoFreeList
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 </UL>
 
 <P><STRONG><a name="[2c]"></a>prvTaskExitError</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, port.o(i.prvTaskExitError))
 <BR>[Address Reference Count : 1]<UL><LI> port.o(i.pxPortInitialiseStack)
 </UL>
-<P><STRONG><a name="[d4]"></a>shellAdd</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, shell.o(i.shellAdd))
-<BR><BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
+<P><STRONG><a name="[d5]"></a>shellAdd</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, shell.o(i.shellAdd))
+<BR><BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
 </UL>
 
-<P><STRONG><a name="[b1]"></a>shellCheckPassword</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, shell.o(i.shellCheckPassword))
+<P><STRONG><a name="[b2]"></a>shellCheckPassword</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, shell.o(i.shellCheckPassword))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = shellCheckPassword &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
-</UL>
-
-<P><STRONG><a name="[d9]"></a>shellGetCommandDesc</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, shell.o(i.shellGetCommandDesc))
-<BR><BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
 </UL>
 
-<P><STRONG><a name="[cb]"></a>shellGetCommandName</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, shell.o(i.shellGetCommandName))
+<P><STRONG><a name="[da]"></a>shellGetCommandDesc</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, shell.o(i.shellGetCommandDesc))
+<BR><BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
+</UL>
+
+<P><STRONG><a name="[cc]"></a>shellGetCommandName</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, shell.o(i.shellGetCommandName))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = shellGetCommandName &rArr; shellToHex
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToHex
+<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToHex
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteCommandHelp
 </UL>
 
-<P><STRONG><a name="[b9]"></a>shellHistory</STRONG> (Thumb, 192 bytes, Stack size 16 bytes, shell.o(i.shellHistory))
+<P><STRONG><a name="[ba]"></a>shellHistory</STRONG> (Thumb, 192 bytes, Stack size 16 bytes, shell.o(i.shellHistory))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = shellHistory &rArr; shellClearCommandLine &rArr; shellDeleteCommandLine &rArr; shellWriteString
 </UL>
 <BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellUp
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDown
 </UL>
 
-<P><STRONG><a name="[bc]"></a>shellHistoryAdd</STRONG> (Thumb, 128 bytes, Stack size 8 bytes, shell.o(i.shellHistoryAdd))
+<P><STRONG><a name="[bd]"></a>shellHistoryAdd</STRONG> (Thumb, 128 bytes, Stack size 8 bytes, shell.o(i.shellHistoryAdd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = shellHistoryAdd &rArr; strcmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
+<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
 </UL>
 
-<P><STRONG><a name="[bd]"></a>shellParserParam</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, shell.o(i.shellParserParam))
+<P><STRONG><a name="[be]"></a>shellParserParam</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, shell.o(i.shellParserParam))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = shellParserParam &rArr; shellSplit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSplit
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSplit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExec
 </UL>
 
-<P><STRONG><a name="[de]"></a>shellRemoveParamQuotes</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, shell.o(i.shellRemoveParamQuotes))
+<P><STRONG><a name="[df]"></a>shellRemoveParamQuotes</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, shell.o(i.shellRemoveParamQuotes))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = shellRemoveParamQuotes
 </UL>
-<BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
+<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
 </UL>
 
-<P><STRONG><a name="[e1]"></a>shellShowVar</STRONG> (Thumb, 164 bytes, Stack size 32 bytes, shell.o(i.shellShowVar))
+<P><STRONG><a name="[e2]"></a>shellShowVar</STRONG> (Thumb, 164 bytes, Stack size 32 bytes, shell.o(i.shellShowVar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = shellShowVar &rArr; shellToDec &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToHex
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToDec
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetVarValue
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToHex
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToDec
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetVarValue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
+<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
 </UL>
 
-<P><STRONG><a name="[e5]"></a>shellStringCompare</STRONG> (Thumb, 46 bytes, Stack size 12 bytes, shell.o(i.shellStringCompare))
+<P><STRONG><a name="[e6]"></a>shellStringCompare</STRONG> (Thumb, 46 bytes, Stack size 12 bytes, shell.o(i.shellStringCompare))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = shellStringCompare
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
 </UL>
 
-<P><STRONG><a name="[d2]"></a>shellStringCopy</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, shell.o(i.shellStringCopy))
+<P><STRONG><a name="[d3]"></a>shellStringCopy</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, shell.o(i.shellStringCopy))
 <BR><BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistoryAdd
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVarValue
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistoryAdd
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHistory
 </UL>
 
-<P><STRONG><a name="[b6]"></a>shellWriteByte</STRONG> (Thumb, 14 bytes, Stack size 16 bytes, shell.o(i.shellWriteByte))
+<P><STRONG><a name="[b7]"></a>shellWriteByte</STRONG> (Thumb, 14 bytes, Stack size 16 bytes, shell.o(i.shellWriteByte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = shellWriteByte
 </UL>
 <BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRight
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellLeft
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInsertByte
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteByte
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInsertByte
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDeleteByte
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
 </UL>
 
-<P><STRONG><a name="[da]"></a>shellWriteCommandDesc</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, shell.o(i.shellWriteCommandDesc))
+<P><STRONG><a name="[db]"></a>shellWriteCommandDesc</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, shell.o(i.shellWriteCommandDesc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = shellWriteCommandDesc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
+<BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
 </UL>
 
-<P><STRONG><a name="[d1]"></a>shellWriteCommandHelp</STRONG> (Thumb, 96 bytes, Stack size 24 bytes, shell.o(i.shellWriteCommandHelp))
+<P><STRONG><a name="[d2]"></a>shellWriteCommandHelp</STRONG> (Thumb, 96 bytes, Stack size 24 bytes, shell.o(i.shellWriteCommandHelp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = shellWriteCommandHelp &rArr; shellSeekCommand &rArr; shellGetCommandName &rArr; shellToHex
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandDesc
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandDesc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellHelp
 </UL>
 
-<P><STRONG><a name="[bb]"></a>shellWritePrompt</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, shell.o(i.shellWritePrompt))
+<P><STRONG><a name="[bc]"></a>shellWritePrompt</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, shell.o(i.shellWritePrompt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = shellWritePrompt &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellTab
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInsertByte
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInsertByte
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellInit
 <LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellEnter
 </UL>
 
-<P><STRONG><a name="[e0]"></a>shellWriteReturnValue</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, shell.o(i.shellWriteReturnValue))
+<P><STRONG><a name="[e1]"></a>shellWriteReturnValue</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, shell.o(i.shellWriteReturnValue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = shellWriteReturnValue &rArr; shellToDec &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToHex
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToDec
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToHex
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellToDec
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
+<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellRunCommand
 </UL>
 
-<P><STRONG><a name="[c1]"></a>shellExtNumType</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, shell_ext.o(i.shellExtNumType))
+<P><STRONG><a name="[c2]"></a>shellExtNumType</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, shell_ext.o(i.shellExtNumType))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = shellExtNumType
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
 </UL>
 
-<P><STRONG><a name="[c5]"></a>shellExtParseChar</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, shell_ext.o(i.shellExtParseChar))
-<BR><BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseString
+<P><STRONG><a name="[c6]"></a>shellExtParseChar</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, shell_ext.o(i.shellExtParseChar))
+<BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseString
 </UL>
 
-<P><STRONG><a name="[c0]"></a>shellExtParseNumber</STRONG> (Thumb, 230 bytes, Stack size 56 bytes, shell_ext.o(i.shellExtParseNumber))
+<P><STRONG><a name="[c1]"></a>shellExtParseNumber</STRONG> (Thumb, 230 bytes, Stack size 56 bytes, shell_ext.o(i.shellExtParseNumber))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = shellExtParseNumber &rArr; __aeabi_ui2f &rArr; _float_epilogue
 </UL>
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtToNum
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtNumType
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtToNum
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtNumType
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
+<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
 </UL>
 
-<P><STRONG><a name="[c7]"></a>shellExtParseString</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, shell_ext.o(i.shellExtParseString))
+<P><STRONG><a name="[c8]"></a>shellExtParseString</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, shell_ext.o(i.shellExtParseString))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = shellExtParseString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseChar
+<BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseChar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
+<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
 </UL>
 
-<P><STRONG><a name="[c6]"></a>shellExtParseVar</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, shell_ext.o(i.shellExtParseVar))
+<P><STRONG><a name="[c7]"></a>shellExtParseVar</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, shell_ext.o(i.shellExtParseVar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = shellExtParseVar &rArr; shellSeekCommand &rArr; shellGetCommandName &rArr; shellToHex
 </UL>
-<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetVarValue
+<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSeekCommand
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetVarValue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
+<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParsePara
 </UL>
 
-<P><STRONG><a name="[c2]"></a>shellExtToNum</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, shell_ext.o(i.shellExtToNum))
-<BR><BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
+<P><STRONG><a name="[c3]"></a>shellExtToNum</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, shell_ext.o(i.shellExtToNum))
+<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellExtParseNumber
 </UL>
 <P>
 <H3>

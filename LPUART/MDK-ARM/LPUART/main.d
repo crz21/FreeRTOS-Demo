@@ -31,8 +31,6 @@ lpuart\main.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_pwr.h
 lpuart\main.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_pwr_ex.h
 lpuart\main.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_uart.h
 lpuart\main.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_uart_ex.h
-lpuart\main.o: ../Core/Inc/gpio.h
-lpuart\main.o: ../Core/Inc/usart.h
 lpuart\main.o: ..\middlewares\freertos\include\FreeRTOS.h
 lpuart\main.o: ..\Core\FreeRTOSConfig.h
 lpuart\main.o: ../Core/Inc/stm32u0xx_it.h
@@ -44,8 +42,10 @@ lpuart\main.o: ..\middlewares\freertos\include\mpu_wrappers.h
 lpuart\main.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdio.h
 lpuart\main.o: ..\middlewares\freertos\include\task.h
 lpuart\main.o: ..\middlewares\freertos\include\list.h
+lpuart\main.o: ../Core/Inc/gpio.h
 lpuart\main.o: ..\middlewares\freertos\include\semphr.h
 lpuart\main.o: ..\middlewares\freertos\include\queue.h
 lpuart\main.o: ..\middlewares\letter_shell\shell_port.h
 lpuart\main.o: ..\middlewares\letter_shell\shell.h
 lpuart\main.o: ..\middlewares\letter_shell\shell_cfg.h
+lpuart\main.o: ../Core/Inc/usart.h
