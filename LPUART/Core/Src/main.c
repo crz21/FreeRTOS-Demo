@@ -1,67 +1,18 @@
-/* USER CODE BEGIN Header */
-/**
- ******************************************************************************
- * @file           : main.c
- * @brief          : Main program body
- ******************************************************************************
- * @attention
- *
- * Copyright (c) 2024 STMicroelectronics.
- * All rights reserved.
- *
- * This software is licensed under terms that can be found in the LICENSE file
- * in the root directory of this software component.
- * If no LICENSE file comes with this software, it is provided AS-IS.
- *
- ******************************************************************************
- */
-/* USER CODE END Header */
-/* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
-#include "gpio.h"
-#include "usart.h"
-
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
 #include <FreeRTOS.h>
 #include <stdio.h>
 #include <task.h>
 
+#include "gpio.h"
 #include "semphr.h"
 #include "shell_port.h"
-/* USER CODE END Includes */
-
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
+#include "usart.h"
 
 static TaskHandle_t m_app_thread;
-/* USER CODE END PTD */
-
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
-
-/* Private variables ---------------------------------------------------------*/
-
-/* USER CODE BEGIN PV */
-
-/* USER CODE END PV */
-
-/* Private function prototypes -----------------------------------------------*/
+QueueHandle_t xStructQueue = NULL;
 void SystemClock_Config(void);
-/* USER CODE BEGIN PFP */
 
-/* USER CODE END PFP */
-
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
 void delay_us(uint16_t us)
 {
     while (us != 0) {
@@ -93,36 +44,18 @@ void delay_us(uint16_t us)
 /**
  * @brief  delay_ms.
  */
-void delay_ms(uint16_t ms)  // 1ms延时
+void delay_ms(uint16_t ms) 
 {
     while (ms != 0) {
-        delay_us(2600);  // 1ms延时
+        delay_us(2600);  
         ms--;
     }
 }
-
-// int fputc(int ch, FILE *f)
-//{
-//     HAL_UART_Transmit(&hlpuart1, (uint8_t *)&ch, 1, 0xffff);
-//     return ch;
-// }
-
-///**
-//* @brief 重定向c库函数getchar,scanf到USARTx
-//* @retval None
-//*/
-// int fgetc(FILE *f)
-//{
-//   uint8_t ch = 0;
-//   HAL_UART_Receive(&hlpuart1, &ch, 1, 0xffff);
-//   return ch;
-//}
 
 static void app_thread(void *arg)
 {
     for (;;) {
         vTaskDelay(pdMS_TO_TICKS(1));
-        // HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
     }
 }
 
@@ -131,29 +64,6 @@ static void app_init()
     if (pdPASS != xTaskCreate(app_thread, "app_task", 128, NULL, 2, &m_app_thread)) {
     }
 }
-
-static TaskHandle_t lettershellTaskHandle;
-/******************************************************************************************************
-** @brief
-*
-*
-* @note
-*******************************************************************************************************/
-__weak void shellTask(void *argument)
-{
-    for (;;) {
-        vTaskDelay(pdMS_TO_TICKS(1));
-    }
-}
-
-/******************************************************************************************************
-** @brief
-*
-* @note
-*******************************************************************************************************/
-void barco_shell_init(void) { xTaskCreate(shellTask, "lettershellTask", 2048, &shell, 5, &lettershellTaskHandle); }
-
-/* USER CODE END 0 */
 
 /**
  * @brief  The application entry point.
@@ -165,9 +75,9 @@ int main(void)
     SystemClock_Config();
     MX_GPIO_Init();
     MX_LPUART1_UART_Init();
+    xStructQueue = xQueueCreate(10, sizeof(xMessage));
     // led_init();
     userShellInit();
-    barco_shell_init();
     app_init();
 
     vTaskStartScheduler();

@@ -38,11 +38,11 @@ lpuart\shell_port.o: ..\middlewares\freertos\include\portable.h
 lpuart\shell_port.o: ..\middlewares\freertos\include\deprecated_definitions.h
 lpuart\shell_port.o: ..\middlewares\freertos\port\RVDS\ARM_CM0\portmacro.h
 lpuart\shell_port.o: ..\middlewares\freertos\include\mpu_wrappers.h
-lpuart\shell_port.o: ..\middlewares\letter_shell\shell.h
-lpuart\shell_port.o: ..\middlewares\letter_shell\shell_cfg.h
-lpuart\shell_port.o: ..\middlewares\freertos\include\task.h
-lpuart\shell_port.o: ..\middlewares\freertos\include\list.h
-lpuart\shell_port.o: ../Core/Inc/usart.h
-lpuart\shell_port.o: ../Core/Inc/main.h
 lpuart\shell_port.o: ..\middlewares\freertos\include\semphr.h
 lpuart\shell_port.o: ..\middlewares\freertos\include\queue.h
+lpuart\shell_port.o: ..\middlewares\freertos\include\task.h
+lpuart\shell_port.o: ..\middlewares\freertos\include\list.h
+lpuart\shell_port.o: ..\middlewares\letter_shell\shell.h
+lpuart\shell_port.o: ..\middlewares\letter_shell\shell_cfg.h
+lpuart\shell_port.o: ../Core/Inc/usart.h
+lpuart\shell_port.o: ../Core/Inc/main.h
