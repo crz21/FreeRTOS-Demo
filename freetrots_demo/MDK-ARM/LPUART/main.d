@@ -42,12 +42,13 @@ lpuart\main.o: ..\middlewares\freertos\include\mpu_wrappers.h
 lpuart\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 lpuart\main.o: ..\middlewares\freertos\include\task.h
 lpuart\main.o: ..\middlewares\freertos\include\list.h
+lpuart\main.o: ..\middlewares\freertos\include\event_groups.h
+lpuart\main.o: ..\middlewares\freertos\include\timers.h
 lpuart\main.o: ../Core/Inc/gpio.h
 lpuart\main.o: ..\middlewares\freertos\include\semphr.h
 lpuart\main.o: ..\middlewares\freertos\include\queue.h
 lpuart\main.o: ..\middlewares\letter_shell\shell_port.h
 lpuart\main.o: ..\middlewares\letter_shell\shell.h
 lpuart\main.o: ..\middlewares\letter_shell\shell_cfg.h
+lpuart\main.o: ..\app\timers_control.h
 lpuart\main.o: ../Core/Inc/usart.h
-lpuart\main.o: ..\middlewares\freertos\include\event_groups.h
-lpuart\main.o: ..\middlewares\freertos\include\timers.h

@@ -32,6 +32,7 @@
 "lpuart\heap_4.o"
 "lpuart\port.o"
 "lpuart\shell_extend.o"
+"lpuart\timers_control.o"
 "lpuart\shell.o"
 "lpuart\shell_cmd_list.o"
 "lpuart\shell_companion.o"

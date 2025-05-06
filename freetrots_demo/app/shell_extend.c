@@ -40,7 +40,7 @@ void led2_thread(void *arg)
 void shell_contrel_led(void)
 {
     Shell *shell = shellGetCurrent();
-    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+//    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
 }
 SHELL_EXPORT_CMD(
 SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC)|SHELL_CMD_DISABLE_RETURN,
