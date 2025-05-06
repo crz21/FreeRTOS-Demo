@@ -10,6 +10,8 @@
 #include "usart.h"
 
 static TaskHandle_t m_app_thread;
+
+EventGroupHandle_t xCreatedEventGroup;
 QueueHandle_t xStructQueue = NULL;
 
 struct AMessage
@@ -84,6 +86,8 @@ int main(void)
     MX_GPIO_Init();
     MX_LPUART1_UART_Init();
     xStructQueue = xQueueCreate(10, sizeof(xMessage));
+     /* Attempt to create the event group. */
+    xCreatedEventGroup = xEventGroupCreate();
     // led_init();
     userShellInit();
     app_init();
