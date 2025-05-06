@@ -44,3 +44,4 @@ lpuart\tasks.o: ..\middlewares\freertos\include\task.h
 lpuart\tasks.o: ..\middlewares\freertos\include\list.h
 lpuart\tasks.o: ..\middlewares\freertos\include\timers.h
 lpuart\tasks.o: ..\middlewares\freertos\include\stack_macros.h
+lpuart\tasks.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

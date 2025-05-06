@@ -5,6 +5,7 @@
 #include "gpio.h"
 #include "semphr.h"
 #include "shell.h"
+#include "task.h"
 
 static TaskHandle_t m_led1_thread;
 static TaskHandle_t m_led2_thread;
@@ -46,6 +47,25 @@ SHELL_EXPORT_CMD(
 SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC)|SHELL_CMD_DISABLE_RETURN,
 led, shell_contrel_led, contrel_led);
 
+
+/******************************************************************************************************
+** @brief
+*
+*
+*
+*******************************************************************************************************/
+void list_thread(int argc, char *agrv[])
+{
+    static char vTask_buffer[4096] = {0};
+    vTaskList(vTask_buffer);
+//    HAL_UART_Transmit(&hlpuart1, (uint8_t *)Buffer, 10, 0xFFFF);
+//    NRF_LOG_RAW_INFO("-------------------------------------------------------------------------------- \r\n");
+//    NRF_LOG_RAW_INFO("Task Name                State  Prio   Stack  Num \r\n");
+//    NRF_LOG_RAW_INFO("%s \r\n", vTask_buffer);
+//    NRF_LOG_RAW_INFO("-------------------------------------------------------------------------------- \r\n");
+}
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0) | SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), thread, list_thread,
+                 show freertos list thread information);
 
 void led_init(void)
 {
