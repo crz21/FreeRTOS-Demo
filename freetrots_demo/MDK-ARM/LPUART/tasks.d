@@ -1,9 +1,9 @@
 lpuart\tasks.o: ..\middlewares\freertos\src\tasks.c
-lpuart\tasks.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-lpuart\tasks.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+lpuart\tasks.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+lpuart\tasks.o: F:\app\keil\ARM\ARMCC\Bin\..\include\string.h
 lpuart\tasks.o: ..\middlewares\freertos\include\FreeRTOS.h
-lpuart\tasks.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-lpuart\tasks.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lpuart\tasks.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stddef.h
+lpuart\tasks.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
 lpuart\tasks.o: ..\Core\FreeRTOSConfig.h
 lpuart\tasks.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u0xx.h
 lpuart\tasks.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u083xx.h
@@ -44,4 +44,4 @@ lpuart\tasks.o: ..\middlewares\freertos\include\task.h
 lpuart\tasks.o: ..\middlewares\freertos\include\list.h
 lpuart\tasks.o: ..\middlewares\freertos\include\timers.h
 lpuart\tasks.o: ..\middlewares\freertos\include\stack_macros.h
-lpuart\tasks.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+lpuart\tasks.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdio.h
