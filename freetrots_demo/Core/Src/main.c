@@ -14,19 +14,18 @@
 static TaskHandle_t m_app_thread;
 
 EventGroupHandle_t xCreatedEventGroup;
-QueueHandle_t xStructQueue = NULL;
+// QueueHandle_t xStructQueue = NULL;
 
-struct AMessage {
-    char ucMessageID;
-    char ucData[20];
-} xMessage;
+// struct AMessage {
+//     char ucMessageID;
+//     char ucData[20];
+// } xMessage;
 
 void SystemClock_Config(void);
 
 void delay_us(uint16_t us)
 {
     while (us != 0) {
-        // hal_delay(20);
         __NOP();
         __NOP();
         __NOP();
@@ -81,14 +80,14 @@ static void app_init()
  */
 int main(void)
 {
-    xMessage.ucMessageID = 0xab;
+    // xMessage.ucMessageID = 0xab;
     HAL_Init();
     SystemClock_Config();
     MX_GPIO_Init();
     MX_LPUART1_UART_Init();
     // xStructQueue = xQueueCreate(10, sizeof(xMessage));
-    // /* Attempt to create the event group. */
-    // xCreatedEventGroup = xEventGroupCreate();
+    /* Attempt to create the event group. */
+    xCreatedEventGroup = xEventGroupCreate();
     userShellInit();
     timers_control_task_init();
     app_init();
