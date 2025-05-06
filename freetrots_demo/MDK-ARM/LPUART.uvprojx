@@ -578,6 +578,11 @@
               <FileType>1</FileType>
               <FilePath>..\app\shell_extend.c</FilePath>
             </File>
+            <File>
+              <FileName>timers_control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\timers_control.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

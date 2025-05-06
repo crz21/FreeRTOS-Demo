@@ -114,5 +114,5 @@ void userShellInit(void)
     //        // logError("shell task creat failed");
     //    } xTaskCreate(shellTask, "lettershellTask", 2048, &shell, 5, &lettershellTaskHandle);
 
-    xTaskCreate(shellTask, "lettershellTask", 2048, &shell, 5, &lettershellTaskHandle);
+    xTaskCreate(shellTask, "lettershellTask", 2048, &shell, 2, &lettershellTaskHandle);
 }

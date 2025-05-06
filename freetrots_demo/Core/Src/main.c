@@ -4,21 +4,21 @@
 #include <stdio.h>
 #include <task.h>
 
+#include "event_groups.h"
 #include "gpio.h"
 #include "semphr.h"
 #include "shell_port.h"
+#include "timers_control.h"
 #include "usart.h"
-#include "event_groups.h"
 
 static TaskHandle_t m_app_thread;
 
 EventGroupHandle_t xCreatedEventGroup;
 QueueHandle_t xStructQueue = NULL;
 
-struct AMessage
-{
+struct AMessage {
     char ucMessageID;
-    char ucData[ 20 ];
+    char ucData[20];
 } xMessage;
 
 void SystemClock_Config(void);
@@ -54,10 +54,10 @@ void delay_us(uint16_t us)
 /**
  * @brief  delay_ms.
  */
-void delay_ms(uint16_t ms) 
+void delay_ms(uint16_t ms)
 {
     while (ms != 0) {
-        delay_us(2600);  
+        delay_us(2600);
         ms--;
     }
 }
@@ -86,11 +86,11 @@ int main(void)
     SystemClock_Config();
     MX_GPIO_Init();
     MX_LPUART1_UART_Init();
-    xStructQueue = xQueueCreate(10, sizeof(xMessage));
-     /* Attempt to create the event group. */
-    xCreatedEventGroup = xEventGroupCreate();
-    // led_init();
+    // xStructQueue = xQueueCreate(10, sizeof(xMessage));
+    // /* Attempt to create the event group. */
+    // xCreatedEventGroup = xEventGroupCreate();
     userShellInit();
+    timers_control_task_init();
     app_init();
 
     vTaskStartScheduler();
