@@ -8,7 +8,7 @@ lpuart\usart.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_def.h
 lpuart\usart.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u0xx.h
 lpuart\usart.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u083xx.h
 lpuart\usart.o: ../Drivers/CMSIS/Include/core_cm0plus.h
-lpuart\usart.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lpuart\usart.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
 lpuart\usart.o: ../Drivers/CMSIS/Include/cmsis_version.h
 lpuart\usart.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 lpuart\usart.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -16,7 +16,7 @@ lpuart\usart.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 lpuart\usart.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/system_stm32u0xx.h
 lpuart\usart.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal.h
 lpuart\usart.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-lpuart\usart.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lpuart\usart.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stddef.h
 lpuart\usart.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_rcc_ex.h
 lpuart\usart.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_gpio.h
 lpuart\usart.o: ../Drivers/STM32U0xx_HAL_Driver/Inc/stm32u0xx_hal_gpio_ex.h

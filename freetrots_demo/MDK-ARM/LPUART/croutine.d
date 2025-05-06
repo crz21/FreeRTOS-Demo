@@ -1,7 +1,7 @@
 lpuart\croutine.o: ..\middlewares\freertos\src\croutine.c
 lpuart\croutine.o: ..\middlewares\freertos\include\FreeRTOS.h
-lpuart\croutine.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-lpuart\croutine.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lpuart\croutine.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stddef.h
+lpuart\croutine.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
 lpuart\croutine.o: ..\Core\FreeRTOSConfig.h
 lpuart\croutine.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u0xx.h
 lpuart\croutine.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u083xx.h

@@ -1,8 +1,8 @@
 lpuart\timers_control.o: ..\app\timers_control.c
 lpuart\timers_control.o: ..\app\timers_control.h
 lpuart\timers_control.o: ..\middlewares\freertos\include\FreeRTOS.h
-lpuart\timers_control.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-lpuart\timers_control.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lpuart\timers_control.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stddef.h
+lpuart\timers_control.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
 lpuart\timers_control.o: ..\Core\FreeRTOSConfig.h
 lpuart\timers_control.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u0xx.h
 lpuart\timers_control.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u083xx.h

@@ -21,6 +21,12 @@ EventGroupHandle_t xCreatedEventGroup;
 //     char ucData[20];
 // } xMessage;
 
+int fputc(int ch, FILE *f)
+{
+  HAL_UART_Transmit(&hlpuart1, (void *)&ch, 1, 0xffff);
+  return ch;
+}
+
 void SystemClock_Config(void);
 
 void delay_us(uint16_t us)

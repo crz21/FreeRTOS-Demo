@@ -1,7 +1,7 @@
 lpuart\shell_port.o: ..\middlewares\letter_shell\shell_port.c
 lpuart\shell_port.o: ..\middlewares\freertos\include\FreeRTOS.h
-lpuart\shell_port.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-lpuart\shell_port.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lpuart\shell_port.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stddef.h
+lpuart\shell_port.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
 lpuart\shell_port.o: ..\Core\FreeRTOSConfig.h
 lpuart\shell_port.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u0xx.h
 lpuart\shell_port.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u083xx.h

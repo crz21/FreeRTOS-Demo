@@ -1,8 +1,8 @@
 lpuart\shell_extend.o: ..\app\shell_extend.c
 lpuart\shell_extend.o: ..\app\shell_extend.h
 lpuart\shell_extend.o: ..\middlewares\freertos\include\FreeRTOS.h
-lpuart\shell_extend.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-lpuart\shell_extend.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+lpuart\shell_extend.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stddef.h
+lpuart\shell_extend.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdint.h
 lpuart\shell_extend.o: ..\Core\FreeRTOSConfig.h
 lpuart\shell_extend.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u0xx.h
 lpuart\shell_extend.o: ../Drivers/CMSIS/Device/ST/STM32U0xx/Include/stm32u083xx.h
@@ -39,7 +39,7 @@ lpuart\shell_extend.o: ..\middlewares\freertos\include\portable.h
 lpuart\shell_extend.o: ..\middlewares\freertos\include\deprecated_definitions.h
 lpuart\shell_extend.o: ..\middlewares\freertos\port\RVDS\ARM_CM0\portmacro.h
 lpuart\shell_extend.o: ..\middlewares\freertos\include\mpu_wrappers.h
-lpuart\shell_extend.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+lpuart\shell_extend.o: F:\app\keil\ARM\ARMCC\Bin\..\include\stdio.h
 lpuart\shell_extend.o: ..\middlewares\freertos\include\task.h
 lpuart\shell_extend.o: ..\middlewares\freertos\include\list.h
 lpuart\shell_extend.o: ../Core/Inc/gpio.h

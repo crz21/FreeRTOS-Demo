@@ -18,8 +18,9 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
 #include "stm32u0xx_it.h"
+
+#include "main.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
@@ -56,6 +57,7 @@
 
 /* External variables --------------------------------------------------------*/
 extern UART_HandleTypeDef hlpuart1;
+extern void xPortSysTickHandler(void);
 /* USER CODE BEGIN EV */
 uint8_t Buffer[10];
 /* USER CODE END EV */
@@ -64,68 +66,62 @@ uint8_t Buffer[10];
 /*           Cortex Processor Interruption and Exception Handlers          */
 /******************************************************************************/
 /**
-  * @brief This function handles Non maskable interrupt.
-  */
+ * @brief This function handles Non maskable interrupt.
+ */
 void NMI_Handler(void)
 {
-  /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
+    /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
 
-  /* USER CODE END NonMaskableInt_IRQn 0 */
-  /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
-  while (1)
-  {
-  }
-  /* USER CODE END NonMaskableInt_IRQn 1 */
+    /* USER CODE END NonMaskableInt_IRQn 0 */
+    /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
+    while (1) {
+    }
+    /* USER CODE END NonMaskableInt_IRQn 1 */
 }
 
 /**
-  * @brief This function handles Hard fault interrupt.
-  */
+ * @brief This function handles Hard fault interrupt.
+ */
 void HardFault_Handler(void)
 {
-  /* USER CODE BEGIN HardFault_IRQn 0 */
+    /* USER CODE BEGIN HardFault_IRQn 0 */
 
-  /* USER CODE END HardFault_IRQn 0 */
-  while (1)
-  {
-    /* USER CODE BEGIN W1_HardFault_IRQn 0 */
-    /* USER CODE END W1_HardFault_IRQn 0 */
-  }
+    /* USER CODE END HardFault_IRQn 0 */
+    while (1) {
+        /* USER CODE BEGIN W1_HardFault_IRQn 0 */
+        /* USER CODE END W1_HardFault_IRQn 0 */
+    }
 }
 
 /**
-  * @brief This function handles System service call via SVC instruction.
-  */
-//void SVC_Handler(void)
+ * @brief This function handles System service call via SVC instruction.
+ */
+// void SVC_Handler(void)
 //{
 
 //}
 
 /**
-  * @brief This function handles Pendable request for system service.
-  */
-//void PendSV_Handler(void)
+ * @brief This function handles Pendable request for system service.
+ */
+// void PendSV_Handler(void)
 //{
 
 //}
 
 /**
-  * @brief This function handles System tick timer.
-  */
+ * @brief This function handles System tick timer.
+ */
 void SysTick_Handler(void)
 {
-
-  // HAL_IncTick();
-
-// delay_decrement();
-    #if (INCLUDE_xTaskGetSchedulerState == 1)
-        if (xTaskgetSchedulerState() != taskSCHEDULER_NOT_STARTED)
-        {
-    #endif
-            xPortSysTickHandler();
-    #if (INCLUDE_xTaskGetSchedulerState == 1)    
-        }
-    #endif
+    // delay_decrement();
+#if (INCLUDE_xTaskGetSchedulerState == 1)
+    if (xTaskgetSchedulerState() != taskSCHEDULER_NOT_STARTED) {
+#endif
+        xPortSysTickHandler();
+#if (INCLUDE_xTaskGetSchedulerState == 1)
+    }
+#endif
 }
 
 /******************************************************************************/
@@ -136,16 +132,15 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
-  * @brief This function handles USART3 (combined with EXTI 24) + LPUART1 global interrupt (combined with EXTI lines 28).
-  */
+ * @brief This function handles USART3 (combined with EXTI 24) + LPUART1 global interrupt (combined with EXTI lines 28).
+ */
 void USART3_LPUART1_IRQHandler(void)
 {
-  /* USER CODE BEGIN USART3_LPUART1_IRQn 0 */
+    /* USER CODE BEGIN USART3_LPUART1_IRQn 0 */
 
-  /* USER CODE END USART3_LPUART1_IRQn 0 */
-  HAL_UART_IRQHandler(&hlpuart1);
-  /* USER CODE BEGIN USART3_LPUART1_IRQn 1 */
+    /* USER CODE END USART3_LPUART1_IRQn 0 */
+    HAL_UART_IRQHandler(&hlpuart1);
+    /* USER CODE BEGIN USART3_LPUART1_IRQn 1 */
 
-  /* USER CODE END USART3_LPUART1_IRQn 1 */
+    /* USER CODE END USART3_LPUART1_IRQn 1 */
 }
-
