@@ -71,6 +71,7 @@ struct gyro_sleep_setting {
 	u8 sleep_state;/**< gyro sleep state configuration*/
 	u8 wakeup_int;/**< gyro wakeup interrupt configuration*/
 };
+#define INCLUDE_BMI160API
 /********************************/
 /**\name POWE MODES DEFINITION */
 /*******************************/

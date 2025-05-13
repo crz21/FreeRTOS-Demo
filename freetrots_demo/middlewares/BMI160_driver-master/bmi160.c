@@ -52,6 +52,7 @@
 /*! file <BMI160 >
     brief <Sensor driver for BMI160> */
 #include "bmi160.h"
+
 /* user defined code to be added here ... */
 static struct bmi160_t *p_bmi160;
 /* used for reading the mag trim values for compensation*/
