@@ -10,6 +10,8 @@
 #include "shell_port.h"
 #include "timers_control.h"
 #include "usart.h"
+#include "bmi160_user.h"
+#include "spi.h"
 
 static TaskHandle_t m_app_thread;
 
@@ -96,6 +98,7 @@ int main(void)
     /* Attempt to create the event group. */
     xCreatedEventGroup = xEventGroupCreate();
     userShellInit();
+    // DWT_Init();
     BMI160_init();
     timers_control_task_init();
     app_init();

@@ -6,12 +6,11 @@
  *      GitHub: ibrahimcahit
  */
 
-#ifndef BMI160_WRAPPER_H_
-#define BMI160_WRAPPER_H_
+#ifndef __BMI160_USER_H__
+#define __BMI160_USER_H__
 
 #include "bmi160.h"
 #include "bmi160_defs.h"
-#include "common_porting.h"
 
 #define TRUE 1
 #define FALSE 0
@@ -24,13 +23,8 @@ typedef struct {
     int8_t INIT_OK_i8;
 } BMI160_t;
 
-int8_t BMI160_init();
 int8_t bmi160ReadAccelGyro(BMI160_t *DataStruct);
-int8_t start_foc();
-
-void set_bmi160_Ares();
-void set_bmi160_Gres();
-void get_bmi160_Ares();
-void get_bmi160_Gres();
 void BMI160_init(void);
+int8_t sensor_spi_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *data, uint16_t len);
+int8_t sensor_spi_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *read_data, uint16_t len);
 #endif /* BMI160_WRAPPER_H_ */

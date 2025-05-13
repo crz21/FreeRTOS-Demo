@@ -6,10 +6,12 @@
  *      GitHub: ibrahimcahit
  */
 
-#include "bmi160_wrapper.h"
+#include "bmi160_user.h"
+
 #include "FreeRTOS.h"
-#include "task.h"
 #include "stm32u0xx.h"
+#include "stm32u0xx_hal_spi.h"
+#include "task.h"
 
 struct bmi160_dev sensor;
 struct bmi160_sensor_data accel;
@@ -18,11 +20,22 @@ struct bmi160_foc_conf foc_conf;
 struct bmi160_offsets offsets;
 struct bmi160_int_settg int_config;
 BMI160_t imu_t;
+float aX_f32, aY_f32, aZ_f32;
+float gX_f32, gY_f32, gZ_f32;
+
+float accel_roll_f32, accel_pitch_f32;
+float gyro_roll_f32, gyro_pitch_f32;
+
+float acc_total_vector_f32 = 0;
+
+float yaw_f32, pitch_f32, roll_f32;
+
+uint32_t loopHz_u64, loopTime_u64;
 // Set initial input parameters
 enum BMI160_Ascale { AFS_RAW = 0, AFS_2G, AFS_4G, AFS_8G, AFS_16G };
 
 enum BMI160_Gscale { GFS_RAW = 0, GFS_125DPS, GFS_250DPS, GFS_500DPS, GFS_1000DPS, GFS_2000DPS };
-
+extern SPI_HandleTypeDef hspi1;
 // Set sensor range. This is for harware sensitivity
 uint8_t BMI160_Asens = AFS_2G;
 uint8_t BMI160_Gsens = GFS_1000DPS;
@@ -39,7 +52,30 @@ float bmi160_aRes, bmi160_gRes;
 
 static TaskHandle_t m_lbmi160_thread;
 
+int8_t sensor_spi_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *data, uint16_t len)
+{
+    uint8_t tx_data[50] = {0};
 
+    tx_data[0] = (uint8_t)(reg_addr >> 8);
+    tx_data[1] = (uint8_t)(reg_addr >> 0);
+    tx_data[2] = 0;
+
+    HAL_SPI_Transmit(&hspi1, &tx_data[0], 1, 0xFF);
+    HAL_SPI_Receive(&hspi1, tx_data, len, 0xFF);
+    return 0;
+}
+
+int8_t sensor_spi_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *read_data, uint16_t len)
+{
+    uint8_t tx_data[50] = {0};
+
+    tx_data[0] = (uint8_t)(reg_addr >> 8);
+    tx_data[1] = (uint8_t)(reg_addr >> 0);
+    memcpy(&tx_data[2], read_data, len);
+
+    HAL_SPI_Transmit(&hspi1, tx_data, len + 1, 0xFF);
+    return 0;
+}
 
 int8_t start_foc()
 {
@@ -176,6 +212,12 @@ void get_bmi160_Gres()
 void bmi160_thread(void *arg)
 {
     int8_t rslt;
+    uint64_t timer_u64 = 0;
+    uint64_t lastTime_u64 = 0;
+
+    uint8_t set_gyro_angles_u8 = 0;
+
+    float acc_total_vector_f32 = 0;
 
     set_bmi160_Ares();
     set_bmi160_Gres();
@@ -183,10 +225,10 @@ void bmi160_thread(void *arg)
     get_bmi160_Gres();
 
     sensor.id = 0;
-    sensor.intf = BMI160_I2C_INTF;
-    sensor.read = SensorAPI_I2Cx_Read;
-    sensor.write = SensorAPI_I2Cx_Write;
-    sensor.delay_ms = HAL_Delay;
+    sensor.intf = BMI160_SPI_INTF;
+    sensor.read = sensor_spi_read;
+    sensor.write = sensor_spi_write;
+    sensor.delay_ms = vTaskDelay;
     sensor.read_write_len = 32;
 
     rslt = bmi160_soft_reset(&sensor);
@@ -253,14 +295,64 @@ void bmi160_thread(void *arg)
 
     imu_t.INIT_OK_i8 = rslt;
     while (rslt == 1);
-    if (imu_t.INIT_OK_i8 != TRUE) {
-        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, SET);
-    }
+    //    if (imu_t.INIT_OK_i8 != TRUE) {
+    //        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, SET);
+    //    }
 
     for (;;) {
+        //        timer_u64 = micros();
+
+        // Read an process data at 1000 Hz rate
+        if (((timer_u64 - lastTime_u64) >= 1000) && (imu_t.INIT_OK_i8 != TRUE))  // && (PIN_LOW == 1))
+        {
+            bmi160ReadAccelGyro(&imu_t);
+
+            aX_f32 = imu_t.BMI160_Ax_f32;  // Read RAW and unscaled acceleration values from all 3 axes, unit: (g)
+            aY_f32 = imu_t.BMI160_Ay_f32;  //
+            aZ_f32 = imu_t.BMI160_Az_f32;  //
+
+            gX_f32 = imu_t.BMI160_Gx_f32 * 0.001f;  // Read scaled gyro values from all 3 axes, unit: (deg/s)
+            gY_f32 = imu_t.BMI160_Gy_f32 * 0.001f;  // 0.001 is 1 ms whic is represents 1000 Hz rate
+            gZ_f32 = imu_t.BMI160_Gz_f32 * 0.001f;  // Multiply readings with calculation period for integration
+
+            gyro_pitch_f32 += gX_f32;  // integrate gyro readings for pitch and roll calculation
+            gyro_roll_f32 += gY_f32;
+
+            gyro_pitch_f32 +=
+                gyro_roll_f32 *
+                sin(gZ_f32 * 0.01745329f);  // correct X andy Y axis readings with respect to Z axis readings
+            gyro_roll_f32 -=
+                gyro_pitch_f32 * sin(gZ_f32 * 0.01745329f);  // sin function accepts radians, 0.01745329 = pi / 180
+
+            acc_total_vector_f32 =
+                sqrt((aX_f32 * aX_f32) + (aY_f32 * aY_f32) + (aZ_f32 * aZ_f32));  // Calculate total acceleration vector
+
+            accel_pitch_f32 = asin(aY_f32 / acc_total_vector_f32) *
+                              57.296f;  // Calculate pitch and roll respect to acceleration readings
+            accel_roll_f32 = asin(aX_f32 / acc_total_vector_f32) * -57.296f;
+
+            accel_pitch_f32 -= 0.0f;  // Corrections or acceleration calculations.
+            accel_roll_f32 -= 0.0f;   // Leave 0 if accel values are ~0.0 when resting
+
+            // initial pitch and roll readings should be aceel-based
+            if (set_gyro_angles_u8) {
+                gyro_pitch_f32 = gyro_pitch_f32 * 0.999f +
+                                 accel_pitch_f32 * 0.001f;  // to calculate final pitch and roll, we get most of
+                gyro_roll_f32 = gyro_roll_f32 * 0.999f +
+                                accel_roll_f32 * 0.001f;  // gyro readings and small amount of accel readings
+            } else {
+                gyro_pitch_f32 = accel_pitch_f32;
+                gyro_roll_f32 = accel_roll_f32;
+                set_gyro_angles_u8 = 1;
+            }
+
+            // integrate calculated pitch and roll with previous values
+            pitch_f32 = pitch_f32 * 0.75f + gyro_pitch_f32 * 0.25f;
+            roll_f32 = roll_f32 * 0.75f + gyro_roll_f32 * 0.25f;
+            //            lastTime_u64 = micros();
+        }
         vTaskDelay(pdMS_TO_TICKS(1));
     }
 }
 
 void BMI160_init(void) { xTaskCreate(bmi160_thread, "bmi160_task", 512, NULL, 5, &m_lbmi160_thread); }
-
