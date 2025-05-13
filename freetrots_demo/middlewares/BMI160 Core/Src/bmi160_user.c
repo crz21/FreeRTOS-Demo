@@ -29,6 +29,10 @@ float gyro_roll_f32, gyro_pitch_f32;
 float acc_total_vector_f32 = 0;
 
 float yaw_f32, pitch_f32, roll_f32;
+uint64_t timer_u64 = 0;
+uint64_t lastTime_u64 = 0;
+
+uint8_t set_gyro_angles_u8 = 0;
 
 uint32_t loopHz_u64, loopTime_u64;
 // Set initial input parameters
@@ -212,12 +216,6 @@ void get_bmi160_Gres()
 void bmi160_thread(void *arg)
 {
     int8_t rslt;
-    uint64_t timer_u64 = 0;
-    uint64_t lastTime_u64 = 0;
-
-    uint8_t set_gyro_angles_u8 = 0;
-
-    float acc_total_vector_f32 = 0;
 
     set_bmi160_Ares();
     set_bmi160_Gres();
@@ -300,10 +298,10 @@ void bmi160_thread(void *arg)
     //    }
 
     for (;;) {
-        //        timer_u64 = micros();
+        timer_u64 = (SystemCoreClock / 1000000U);
 
         // Read an process data at 1000 Hz rate
-        if (((timer_u64 - lastTime_u64) >= 1000) && (imu_t.INIT_OK_i8 != TRUE))  // && (PIN_LOW == 1))
+        if (/*((timer_u64 - lastTime_u64) >= 1000) && */(imu_t.INIT_OK_i8 != TRUE))  // && (PIN_LOW == 1))
         {
             bmi160ReadAccelGyro(&imu_t);
 
