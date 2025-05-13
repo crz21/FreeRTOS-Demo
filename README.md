@@ -1,1 +1,1 @@
-使用stm32f083rct6作为FreeRTOS载体并移植letter shell
+使用stm32f083rct6作为FreeRTOS载体并移植letter shell,并逐步添加各种功能
