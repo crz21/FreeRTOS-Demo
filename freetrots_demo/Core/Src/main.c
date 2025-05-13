@@ -23,8 +23,8 @@ EventGroupHandle_t xCreatedEventGroup;
 
 int fputc(int ch, FILE *f)
 {
-  HAL_UART_Transmit(&hlpuart1, (void *)&ch, 1, 0xffff);
-  return ch;
+    HAL_UART_Transmit(&hlpuart1, (void *)&ch, 1, 0xffff);
+    return ch;
 }
 
 void SystemClock_Config(void);
@@ -91,6 +91,7 @@ int main(void)
     SystemClock_Config();
     MX_GPIO_Init();
     MX_LPUART1_UART_Init();
+    MX_SPI1_Init();
     // xStructQueue = xQueueCreate(10, sizeof(xMessage));
     /* Attempt to create the event group. */
     xCreatedEventGroup = xEventGroupCreate();
