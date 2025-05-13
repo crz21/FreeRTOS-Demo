@@ -96,6 +96,7 @@ int main(void)
     /* Attempt to create the event group. */
     xCreatedEventGroup = xEventGroupCreate();
     userShellInit();
+    BMI160_init();
     timers_control_task_init();
     app_init();
 
