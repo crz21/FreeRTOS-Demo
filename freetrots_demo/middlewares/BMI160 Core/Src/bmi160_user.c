@@ -353,4 +353,4 @@ void bmi160_thread(void *arg)
     }
 }
 
-void BMI160_init(void) { xTaskCreate(bmi160_thread, "bmi160_task", 512, NULL, 5, &m_lbmi160_thread); }
+void bmi160_thread_init(void) { xTaskCreate(bmi160_thread, "bmi160_task", 512, NULL, 5, &m_lbmi160_thread); }

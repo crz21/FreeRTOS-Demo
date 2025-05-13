@@ -99,7 +99,7 @@ int main(void)
     xCreatedEventGroup = xEventGroupCreate();
     userShellInit();
     // DWT_Init();
-    BMI160_init();
+    bmi160_thread_init();
     timers_control_task_init();
     app_init();
 

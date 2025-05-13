@@ -24,7 +24,7 @@ typedef struct {
 } BMI160_t;
 
 int8_t bmi160ReadAccelGyro(BMI160_t *DataStruct);
-void BMI160_init(void);
+void bmi160_thread_init(void);
 int8_t sensor_spi_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *data, uint16_t len);
 int8_t sensor_spi_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *read_data, uint16_t len);
 #endif /* BMI160_WRAPPER_H_ */
