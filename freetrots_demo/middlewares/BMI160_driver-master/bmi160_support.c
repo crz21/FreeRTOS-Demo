@@ -51,6 +51,8 @@
 **************************************************************************/
 #include "bmi160_support.h"
 #include "bmi160.h"
+#include "spi.h"
+
 /* Mapping the structure*/
 struct bmi160_t s_bmi160;
 /* Read the sensor data of accel, gyro and mag*/
@@ -58,7 +60,7 @@ struct bmi160_gyro_t gyroxyz;
 struct bmi160_accel_t accelxyz;
 struct bmi160_mag_t magxyzr;
 struct trim_data *mag_trim;
-
+extern SPI_HandleTypeDef hspi1;
 /*!
  *	@brief This function used for initialize the sensor
  *
@@ -733,6 +735,8 @@ s8 bmi160_spi_bus_write(u8 dev_addr, u8 reg_addr, u8 *reg_data, u8 cnt)
 		array[stringpos * C_BMI160_TWO_U8X +
 		C_BMI160_ONE_U8X] = *(reg_data + stringpos);
 	}
+	HAL_SPI_Transmit(&hspi1, &dev_addr, sizeof(dev_addr), 0xffff);
+	HAL_SPI_Transmit(&hspi1, &reg_addr, sizeof(reg_addr), 0xffff);
 		/* Please take the below function as your reference
 	 * for write the data using SPI communication
 	 * add your SPI write function here.

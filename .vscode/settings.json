@@ -8,6 +8,10 @@
         "stdio.h": "c",
         "task.h": "c",
         "led.h": "c",
-        "gpio.h": "c"
+        "gpio.h": "c",
+        "main.h": "c",
+        "stm32u0xx_hal.h": "c",
+        "stm32u0xx_hal_conf.h": "c",
+        "bmi160_support.h": "c"
     }
 }
