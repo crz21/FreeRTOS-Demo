@@ -626,7 +626,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>bmi160</GroupName>
+          <GroupName>bmi160_sensor</GroupName>
           <Files>
             <File>
               <FileName>bmi160.c</FileName>
