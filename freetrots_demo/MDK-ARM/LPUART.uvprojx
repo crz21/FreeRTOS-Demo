@@ -16,7 +16,7 @@
         <TargetCommonOption>
           <Device>STM32U083RCTx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32U0xx_DFP.1.0.0</PackID>
+          <PackID>Keil.STM32U0xx_DFP.2.0.0</PackID>
           <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000-0x20007FFF) IROM(0x8000000-0x803FFFF)  CLOCK(25000000) CPUTYPE("Cortex-M0+") TZ</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32U083xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32U0xx_HAL_Driver/Inc;../Drivers/STM32U0xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32U0xx/Include;../Drivers/CMSIS/Include;..\middlewares\freertos\include;..\Core;..\middlewares\freertos\port\RVDS\ARM_CM0;..\app;..\middlewares\freertos\include;..\middlewares\letter_shell</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32U0xx_HAL_Driver/Inc;../Drivers/STM32U0xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32U0xx/Include;../Drivers/CMSIS/Include;..\middlewares\freertos\include;..\Core;..\middlewares\freertos\port\RVDS\ARM_CM0;..\app;..\middlewares\freertos\include;..\middlewares\letter_shell;..\middlewares\BMI160 Core\Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -417,6 +417,11 @@
               <FileName>stm32u0xx_hal_msp.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/stm32u0xx_hal_msp.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\spi.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -502,6 +507,11 @@
               <FileName>stm32u0xx_hal_tim_ex.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32U0xx_HAL_Driver/Src/stm32u0xx_hal_tim_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32u0xx_hal_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\STM32U0xx_HAL_Driver\Src\stm32u0xx_hal_spi.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -612,6 +622,21 @@
               <FileName>shell_port.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\middlewares\letter_shell\shell_port.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>bmi160</GroupName>
+          <Files>
+            <File>
+              <FileName>bmi160.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\middlewares\BMI160 Core\Src\bmi160.c</FilePath>
+            </File>
+            <File>
+              <FileName>bmi160_user.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\middlewares\BMI160 Core\Src\bmi160_user.c</FilePath>
             </File>
           </Files>
         </Group>
