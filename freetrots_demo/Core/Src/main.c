@@ -4,14 +4,17 @@
 #include <stdio.h>
 #include <task.h>
 
+#include "bmi160_defs.h"
+#include "bmi160_user.h"
 #include "event_groups.h"
 #include "gpio.h"
+#include "i2c.h"
 #include "semphr.h"
 #include "shell_port.h"
+#include "spi.h"
+#include "i2c.h"
 #include "timers_control.h"
 #include "usart.h"
-#include "bmi160_user.h"
-#include "spi.h"
 
 static TaskHandle_t m_app_thread;
 
@@ -93,7 +96,12 @@ int main(void)
     SystemClock_Config();
     MX_GPIO_Init();
     MX_LPUART1_UART_Init();
+
+#if(BMI160_PERIPHERAL == BMI160_SPI_INTF)
     MX_SPI1_Init();
+#elif (BMI160_PERIPHERAL == BMI160_I2C_INTF)
+    MX_I2C2_Init();
+#endif
     // xStructQueue = xQueueCreate(10, sizeof(xMessage));
     /* Attempt to create the event group. */
     xCreatedEventGroup = xEventGroupCreate();

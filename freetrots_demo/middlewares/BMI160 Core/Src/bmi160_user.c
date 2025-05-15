@@ -9,8 +9,7 @@
 #include "bmi160_user.h"
 
 #include "FreeRTOS.h"
-#include "stm32u0xx.h"
-#include "stm32u0xx_hal_spi.h"
+#include "stm32u0xx_hal.h"
 #include "task.h"
 
 struct bmi160_dev sensor;
@@ -39,7 +38,7 @@ uint32_t loopHz_u64, loopTime_u64;
 enum BMI160_Ascale { AFS_RAW = 0, AFS_2G, AFS_4G, AFS_8G, AFS_16G };
 
 enum BMI160_Gscale { GFS_RAW = 0, GFS_125DPS, GFS_250DPS, GFS_500DPS, GFS_1000DPS, GFS_2000DPS };
-extern SPI_HandleTypeDef hspi1;
+
 // Set sensor range. This is for harware sensitivity
 uint8_t BMI160_Asens = AFS_2G;
 uint8_t BMI160_Gsens = GFS_1000DPS;
@@ -56,10 +55,10 @@ float bmi160_aRes, bmi160_gRes;
 
 static TaskHandle_t m_lbmi160_thread;
 
-int8_t sensor_spi_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *data, uint16_t len)
+int8_t bmi160_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *data, uint16_t len)
 {
     uint8_t tx_data[50] = {0};
-
+#if (BMI160_PERIPHERAL == BMI160_SPI_INTF)
     tx_data[0] = (uint8_t)(reg_addr >> 8);
     tx_data[1] = (uint8_t)(reg_addr >> 0);
     tx_data[2] = 0;
@@ -67,18 +66,30 @@ int8_t sensor_spi_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *data, uint16
     HAL_SPI_Transmit(&hspi1, &tx_data[0], 1, 0xFF);
     HAL_SPI_Receive(&hspi1, tx_data, len, 0xFF);
     return 0;
+#elif (BMI160_PERIPHERAL == BMI160_I2C_INTF)
+    HAL_I2C_Master_Transmit(&I2C_HANDLE, BMI160_ADDR, &reg_addr, 1, I2CTIMEOUT);
+    HAL_I2C_Master_Receive(&I2C_HANDLE, BMI160_ADDR, data, len, I2CTIMEOUT);
+    return 0;
+#endif
 }
 
-int8_t sensor_spi_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *read_data, uint16_t len)
+int8_t bmi160_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *read_data, uint16_t len)
 {
     uint8_t tx_data[50] = {0};
-
+#if (BMI160_PERIPHERAL == BMI160_SPI_INTF)
     tx_data[0] = (uint8_t)(reg_addr >> 8);
     tx_data[1] = (uint8_t)(reg_addr >> 0);
     memcpy(&tx_data[2], read_data, len);
 
     HAL_SPI_Transmit(&hspi1, tx_data, len + 1, 0xFF);
     return 0;
+#elif (BMI160_PERIPHERAL == BMI160_I2C_INTF)
+    tx_data[0] = reg_addr;
+    memcpy(&tx_data[1], read_data, len);
+
+    HAL_I2C_Master_Transmit(&I2C_HANDLE, BMI160_ADDR, tx_data, len + 1, I2CTIMEOUT);
+		return 0;
+#endif
 }
 
 int8_t start_foc()
@@ -223,9 +234,9 @@ void bmi160_thread(void *arg)
     get_bmi160_Gres();
 
     sensor.id = 0;
-    sensor.intf = BMI160_SPI_INTF;
-    sensor.read = sensor_spi_read;
-    sensor.write = sensor_spi_write;
+    sensor.intf = BMI160_PERIPHERAL;
+    sensor.read = bmi160_read;
+    sensor.write = bmi160_write;
     sensor.delay_ms = vTaskDelay;
     sensor.read_write_len = 32;
 
@@ -301,7 +312,7 @@ void bmi160_thread(void *arg)
         timer_u64 = (SystemCoreClock / 1000000U);
 
         // Read an process data at 1000 Hz rate
-        if (/*((timer_u64 - lastTime_u64) >= 1000) && */(imu_t.INIT_OK_i8 != TRUE))  // && (PIN_LOW == 1))
+        if (/*((timer_u64 - lastTime_u64) >= 1000) && */ (imu_t.INIT_OK_i8 != TRUE))  // && (PIN_LOW == 1))
         {
             bmi160ReadAccelGyro(&imu_t);
 

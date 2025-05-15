@@ -11,10 +11,23 @@
 
 #include "bmi160.h"
 #include "bmi160_defs.h"
+#include "stm32u0xx_hal.h"
 
 #define TRUE 1
 #define FALSE 0
 #define PRINTIF_DEBUG 0
+// #define BMI160_PERIPHERAL BMI160_SPI_INTF
+#define BMI160_PERIPHERAL BMI160_I2C_INTF
+
+#if (BMI160_PERIPHERAL == BMI160_SPI_INTF)
+extern SPI_HandleTypeDef hspi1;
+#elif (BMI160_PERIPHERAL == BMI160_I2C_INTF)
+extern I2C_HandleTypeDef hi2c2;
+#define I2C_HANDLE (hi2c2)
+#define BMI160_ADDR 0x69 << 1
+#define BUS_TIMEOUT 1000
+#define I2CTIMEOUT 100
+#endif
 
 typedef struct {
     float BMI160_Ax_f32, BMI160_Ay_f32, BMI160_Az_f32;

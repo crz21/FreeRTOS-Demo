@@ -12,6 +12,10 @@
         "main.h": "c",
         "stm32u0xx_hal.h": "c",
         "stm32u0xx_hal_conf.h": "c",
-        "bmi160_support.h": "c"
+        "bmi160_support.h": "c",
+        "bmi160_user.h": "c",
+        "event_groups.h": "c",
+        "stm32u0xx_hal_rtc.h": "c",
+        "stm32u0xx.h": "c"
     }
 }
