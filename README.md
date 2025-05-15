@@ -6,5 +6,5 @@
 - 可通过letter shell输入指令查询任务运行态和内存的情况
 - 可通过bmi160_user.h中的#define BMI160_PERIPHERAL决定外设为SPI或I2C
 
-## 预留
+
 
