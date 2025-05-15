@@ -91,22 +91,18 @@ static void app_init()
  */
 int main(void)
 {
-    // xMessage.ucMessageID = 0xab;
     HAL_Init();
     SystemClock_Config();
     MX_GPIO_Init();
     MX_LPUART1_UART_Init();
-
 #if(BMI160_PERIPHERAL == BMI160_SPI_INTF)
     MX_SPI1_Init();
 #elif (BMI160_PERIPHERAL == BMI160_I2C_INTF)
     MX_I2C2_Init();
 #endif
-    // xStructQueue = xQueueCreate(10, sizeof(xMessage));
     /* Attempt to create the event group. */
     xCreatedEventGroup = xEventGroupCreate();
     userShellInit();
-    // DWT_Init();
     bmi160_thread_init();
     timers_control_task_init();
     app_init();

@@ -312,7 +312,7 @@ void bmi160_thread(void *arg)
 
     for (;;) {
         // Read an process data at 1000 Hz rate
-        if (imu_t.INIT_OK_i8 != TRUE)  // && (PIN_LOW == 1))
+        if (imu_t.INIT_OK_i8 != TRUE)
         {
             bmi160ReadAccelGyro(&imu_t);
 
