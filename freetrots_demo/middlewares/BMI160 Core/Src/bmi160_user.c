@@ -11,7 +11,7 @@
 #include "FreeRTOS.h"
 #include "stm32u0xx_hal.h"
 #include "task.h"
-
+#define NOP (0xFF)
 struct bmi160_dev sensor;
 struct bmi160_sensor_data accel;
 struct bmi160_sensor_data gyro;
@@ -55,18 +55,31 @@ float bmi160_aRes, bmi160_gRes;
 
 static TaskHandle_t m_lbmi160_thread;
 
+uint8_t SPIx_ReadWriteByte(SPI_HandleTypeDef *hspi, uint8_t byte)
+{
+    uint8_t d_read, d_send = byte;
+    if (HAL_SPI_TransmitReceive(hspi, &d_send, &d_read, 1, SPITIMEOUT) != HAL_OK) {
+        d_read = 0xFF;
+    }
+    return d_read;
+}
+
 int8_t bmi160_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *data, uint16_t len)
 {
 #if (BMI160_PERIPHERAL == BMI160_SPI_INTF)
     uint8_t tx_data[50] = {0};
-    uint8_t rx_data[50] = {0};
+    uint8_t i = 0;
 
     memset(tx_data, 0xFF, len);
     tx_data[0] = reg_addr;
     CS_ENABLE();
     vTaskDelay(pdMS_TO_TICKS(10));
-    HAL_SPI_TransmitReceive(&hspi1, tx_data, rx_data, len, SPITIMEOUT);
     vTaskDelay(pdMS_TO_TICKS(10));
+    SPIx_ReadWriteByte(&hspi1, reg_addr);
+    for (i = 0; i < len; i++) {
+        data[i] = SPIx_ReadWriteByte(&hspi1, NOP);
+    }
+
     CS_DISABLE();
 #elif (BMI160_PERIPHERAL == BMI160_I2C_INTF)
     HAL_I2C_Master_Transmit(&hi2c2, BMI160_ADDR, &reg_addr, 1, I2CTIMEOUT);
@@ -312,8 +325,7 @@ void bmi160_thread(void *arg)
 
     for (;;) {
         // Read an process data at 1000 Hz rate
-        if (imu_t.INIT_OK_i8 != TRUE)
-        {
+        if (imu_t.INIT_OK_i8 != TRUE) {
             bmi160ReadAccelGyro(&imu_t);
 
             aX_f32 = imu_t.BMI160_Ax_f32;  // Read RAW and unscaled acceleration values from all 3 axes, unit: (g)

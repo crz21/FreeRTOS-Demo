@@ -152,9 +152,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>257</LineNumber>
+          <LineNumber>271</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134240758</Address>
+          <Address>134240814</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -163,14 +163,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\middlewares\BMI160 Core\Src\bmi160_user.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\LPUART\../middlewares/BMI160 Core/Src/bmi160_user.c\257</Expression>
+          <Expression>\\LPUART\../middlewares/BMI160 Core/Src/bmi160_user.c\271</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>262</LineNumber>
+          <LineNumber>276</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134240772</Address>
+          <Address>134240828</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -179,7 +179,7 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\middlewares\BMI160 Core\Src\bmi160_user.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\LPUART\../middlewares/BMI160 Core/Src/bmi160_user.c\262</Expression>
+          <Expression>\\LPUART\../middlewares/BMI160 Core/Src/bmi160_user.c\276</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -198,6 +198,16 @@
           <WinNumber>1</WinNumber>
           <ItemText>aY_f32</ItemText>
         </Ww>
+        <Ww>
+          <count>3</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>rx_data</ItemText>
+        </Ww>
+        <Ww>
+          <count>4</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>data</ItemText>
+        </Ww>
       </WatchWindow1>
       <Tracepoint>
         <THDelay>0</THDelay>
@@ -205,7 +215,7 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
-        <aLwin>1</aLwin>
+        <aLwin>0</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
