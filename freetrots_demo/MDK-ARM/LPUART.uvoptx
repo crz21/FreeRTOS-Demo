@@ -152,9 +152,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>271</LineNumber>
+          <LineNumber>270</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134240814</Address>
+          <Address>134240816</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -163,14 +163,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\middlewares\BMI160 Core\Src\bmi160_user.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\LPUART\../middlewares/BMI160 Core/Src/bmi160_user.c\271</Expression>
+          <Expression>\\LPUART\../middlewares/BMI160 Core/Src/bmi160_user.c\270</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>276</LineNumber>
+          <LineNumber>264</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134240828</Address>
+          <Address>134240798</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -179,7 +179,23 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>..\middlewares\BMI160 Core\Src\bmi160_user.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\LPUART\../middlewares/BMI160 Core/Src/bmi160_user.c\276</Expression>
+          <Expression>\\LPUART\../middlewares/BMI160 Core/Src/bmi160_user.c\264</Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>62</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134232280</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\middlewares\BMI160 Core\Src\bmi160_user.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\LPUART\../middlewares/BMI160 Core/Src/bmi160_user.c\62</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -205,6 +221,11 @@
         </Ww>
         <Ww>
           <count>4</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>data</ItemText>
+        </Ww>
+        <Ww>
+          <count>5</count>
           <WinNumber>1</WinNumber>
           <ItemText>data</ItemText>
         </Ww>
