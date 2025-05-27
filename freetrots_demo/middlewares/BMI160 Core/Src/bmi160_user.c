@@ -365,7 +365,6 @@ void bmi160_thread(void *arg)
             pitch_f32 = pitch_f32 * 0.75f + gyro_pitch_f32 * 0.25f;
             roll_f32 = roll_f32 * 0.75f + gyro_roll_f32 * 0.25f;
         }
-        vTaskDelay(pdMS_TO_TICKS(1));
     }
 }
 
