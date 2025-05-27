@@ -74,9 +74,7 @@ int8_t bmi160_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *data, uint16_t l
     tx_data[0] = reg_addr;
     CS_ENABLE();
     SPIx_ReadWriteByte(&hspi1, reg_addr);
-    for (i = 0; i < len; i++) {
-        data[i] = SPIx_ReadWriteByte(&hspi1, NOP);
-    }
+    for (i = 0; i < len; i++) data[i] = SPIx_ReadWriteByte(&hspi1, NOP);
     CS_DISABLE();
 #elif (BMI160_PERIPHERAL == BMI160_I2C_INTF)
     HAL_I2C_Master_Transmit(&hi2c2, BMI160_ADDR, &reg_addr, 1, I2CTIMEOUT);
@@ -89,13 +87,11 @@ int8_t bmi160_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *data, uint16_t l
 int8_t bmi160_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *data, uint16_t len)
 {
     uint8_t tx_data[50] = {0};
+#if (BMI160_PERIPHERAL == BMI160_SPI_INTF)
     uint8_t i = 0;
 
-#if (BMI160_PERIPHERAL == BMI160_SPI_INTF)
-    // tx_data[0] = reg_addr;
     memcpy(tx_data, data, len);
     CS_ENABLE();
-    // HAL_SPI_TransmitReceive(&hspi1, tx_data, NULL, len + 1, SPITIMEOUT);
     SPIx_ReadWriteByte(&hspi1, reg_addr);
     for (i = 0; i < len; i++) SPIx_ReadWriteByte(&hspi1, tx_data[i]);
     CS_DISABLE();
@@ -369,7 +365,7 @@ void bmi160_thread(void *arg)
             pitch_f32 = pitch_f32 * 0.75f + gyro_pitch_f32 * 0.25f;
             roll_f32 = roll_f32 * 0.75f + gyro_roll_f32 * 0.25f;
         }
-        vTaskDelay(pdMS_TO_TICKS(100));
+        vTaskDelay(pdMS_TO_TICKS(1));
     }
 }
 
