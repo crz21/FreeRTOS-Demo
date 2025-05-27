@@ -409,10 +409,10 @@ ARM Macro Assembler    Page 7
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --apcs=inter
 work --depend=lpuart\startup_stm32u083xx.d -olpuart\startup_stm32u083xx.o -I.\R
-TE\_LPUART -IF:\app\keil\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include --predefin
-e="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 536" --predefine="_RT
-E_ SETA 1" --predefine="STM32U083xx SETA 1" --predefine="_RTE_ SETA 1" --list=s
-tartup_stm32u083xx.lst startup_stm32u083xx.s
+TE\_LPUART -IE:\Keil_v5\RAM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include --predefine
+="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 536" --predefine="_RTE
+_ SETA 1" --predefine="STM32U083xx SETA 1" --predefine="_RTE_ SETA 1" --list=st
+artup_stm32u083xx.lst startup_stm32u083xx.s
 
 
 
