@@ -153,27 +153,22 @@
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>chipID</ItemText>
+          <ItemText>gyro_pitch_f32</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>aX_f32</ItemText>
+          <ItemText>gyro_roll_f32</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>aY_f32</ItemText>
+          <ItemText>pitch_f32</ItemText>
         </Ww>
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>gX_f32</ItemText>
-        </Ww>
-        <Ww>
-          <count>4</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>gZ_f32</ItemText>
+          <ItemText>roll_f32</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
